@@ -15,6 +15,8 @@
 #include "MinimumPathSumOnTriangleSolution.h"
 #include "PascalTriangleSolution.h"
 #include "PascalTriangleIISolution.h"
+#include "PolulatingNextRightPointersInEachNodeIISolution.h"
+
 
 using std::cout;
 using std::endl;
