@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "ValidPalindromeSolution.h"
-#include "BinaryTreeMaximumPathSumSolution.h"
+//#include "BinaryTreeMaximumPathSumSolution.h"
 #include "BestTimetoBuyandSellStockSolutionI.h"
 #include "BestTimetoBuyandSellStockSolutionII.h"
 #include "BestTimetoBuyandSellStockSolutionIII.h"
@@ -16,7 +16,7 @@
 #include "PascalTriangleSolution.h"
 #include "PascalTriangleIISolution.h"
 #include "PolulatingNextRightPointersInEachNodeIISolution.h"
-
+#include "FlattenBinaryTreeToLinkedList.h"
 
 using std::cout;
 using std::endl;
@@ -63,10 +63,24 @@ int main(int argc, const char * argv[])
 //    PascalTriangleSolution pasacalTriangle;
 //    vector<vector<int> > triangle = pasacalTriangle.generate(3);
     
-    PascalTriangleIISolution pasacalTriangleII;
-    vector<int> line = pasacalTriangleII.getRow(3);
-    for (size_t i = 0; i < line.size(); ++i) {
-        cout << line[i] << "\t";
+//    PascalTriangleIISolution pasacalTriangleII;
+//    vector<int> line = pasacalTriangleII.getRow(3);
+//    for (size_t i = 0; i < line.size(); ++i) {
+//        cout << line[i] << "\t";
+//    }
+//    cout << endl;
+    
+    TreeNode node2(2);
+    TreeNode node1(1);
+    TreeNode node3(3);
+    node1.left = &node2;
+    node1.right = &node3;
+    FlattenBinaryTreeToLinkedListSolution solution;
+    solution.flatten(&node1);
+    TreeNode * lpNode = &node1;
+    while (lpNode) {
+        cout << lpNode->val << "\t";
+        lpNode = lpNode->right;
     }
     cout << endl;
     
