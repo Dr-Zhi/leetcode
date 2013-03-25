@@ -17,6 +17,8 @@
 #include "PascalTriangleIISolution.h"
 #include "PolulatingNextRightPointersInEachNodeIISolution.h"
 #include "FlattenBinaryTreeToLinkedList.h"
+#include "PathSumIISolution.h"
+#include "MinimumDepthOfBinaryTreeSolution.h"
 
 using std::cout;
 using std::endl;
