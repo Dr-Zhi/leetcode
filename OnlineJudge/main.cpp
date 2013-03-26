@@ -7,8 +7,12 @@
 //
 
 #include <iostream>
+
+
+#include "ConvertSortedListToBinarySearchTreeSolution.h"
+#include "ConvertSortedArrayToBinarySearchTreeSolution.h"
 #include "ValidPalindromeSolution.h"
-//#include "BinaryTreeMaximumPathSumSolution.h"
+#include "BinaryTreeMaximumPathSumSolution.h"
 #include "BestTimetoBuyandSellStockSolutionI.h"
 #include "BestTimetoBuyandSellStockSolutionII.h"
 #include "BestTimetoBuyandSellStockSolutionIII.h"
@@ -16,7 +20,6 @@
 #include "PascalTriangleSolution.h"
 #include "PascalTriangleIISolution.h"
 #include "PolulatingNextRightPointersInEachNodeIISolution.h"
-#include "FlattenBinaryTreeToLinkedList.h"
 #include "PathSumIISolution.h"
 #include "MinimumDepthOfBinaryTreeSolution.h"
 #include "BalancedBinaryTreeSolution.h"
@@ -73,19 +76,19 @@ int main(int argc, const char * argv[])
 //    }
 //    cout << endl;
     
-    TreeNode node2(2);
-    TreeNode node1(1);
-    TreeNode node3(3);
-    node1.left = &node2;
-    node1.right = &node3;
-    FlattenBinaryTreeToLinkedListSolution solution;
-    solution.flatten(&node1);
-    TreeNode * lpNode = &node1;
-    while (lpNode) {
-        cout << lpNode->val << "\t";
-        lpNode = lpNode->right;
-    }
-    cout << endl;
+//    TreeNode node2(2);
+//    TreeNode node1(1);
+//    TreeNode node3(3);
+//    node1.left = &node2;
+//    node1.right = &node3;
+//    FlattenBinaryTreeToLinkedListSolution solution;
+//    solution.flatten(&node1);
+//    TreeNode * lpNode = &node1;
+//    while (lpNode) {
+//        cout << lpNode->val << "\t";
+//        lpNode = lpNode->right;
+//    }
+//    cout << endl;
     
     return EXIT_SUCCESS;
 }
