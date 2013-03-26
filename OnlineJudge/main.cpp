@@ -19,6 +19,7 @@
 #include "FlattenBinaryTreeToLinkedList.h"
 #include "PathSumIISolution.h"
 #include "MinimumDepthOfBinaryTreeSolution.h"
+#include "BalancedBinaryTreeSolution.h"
 
 using std::cout;
 using std::endl;
