@@ -23,6 +23,8 @@
 #include "PathSumIISolution.h"
 #include "MinimumDepthOfBinaryTreeSolution.h"
 #include "BalancedBinaryTreeSolution.h"
+#include "BinaryTreeLevelOrderTraversalSolution.h"
+#include "BinaryTreeLevelOrderTraversalSolutionII.h"
 
 using std::cout;
 using std::endl;
