@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Dr. Zhi Inc. All rights reserved.
 //
 
-#ifndef OnlineJudge_SymmetricTreeSolution_h
-#define OnlineJudge_SymmetricTreeSolution_h
+#ifndef OnlineJudge_SymmetricTreeSolutionRecursive_h
+#define OnlineJudge_SymmetricTreeSolutionRecursive_h
 
 /**
  * Definition for binary tree
@@ -43,7 +43,7 @@ struct TreeNode {
  * iteratively.
  * This is a recursive version.
  */
-class SymmetricTreeSolution {
+class SymmetricTreeSolutionRecursive {
 public:
     bool isSymmetric(TreeNode *root) {
         // Start typing your C/C++ solution below

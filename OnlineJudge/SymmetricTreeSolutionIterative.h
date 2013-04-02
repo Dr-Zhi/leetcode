@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Dr. Zhi Inc. All rights reserved.
 //
 
-#ifndef OnlineJudge_SymmetricTreeSolutionII_h
-#define OnlineJudge_SymmetricTreeSolutionII_h
+#ifndef OnlineJudge_SymmetricTreeSolutionIterative_h
+#define OnlineJudge_SymmetricTreeSolutionIterative_h
 
 #include <stack>
 
@@ -47,7 +47,7 @@ struct TreeNode {
  * iteratively.
  * This is the iterative version.
  */
-class SymmetricTreeSolutionII {
+class SymmetricTreeSolutionIterative {
 public:
     bool isSymmetric(TreeNode *root) {
         // Start typing your C/C++ solution below

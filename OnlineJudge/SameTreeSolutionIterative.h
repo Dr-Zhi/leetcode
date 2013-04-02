@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Dr. Zhi Inc. All rights reserved.
 //
 
-#ifndef OnlineJudge_SameTreeSolution_h
-#define OnlineJudge_SameTreeSolution_h
+#ifndef OnlineJudge_SameTreeSolutionIterative_h
+#define OnlineJudge_SameTreeSolutionIterative_h
 
 #include <stack>
 
@@ -34,7 +34,7 @@ struct TreeNode {
  * identical and the nodes have the same value.
  * This is an iterative (non-recursive) algorithm. 
  */
-class SameTreeSolution {
+class SameTreeSolutionIterative {
 public:
     bool isSameTree(TreeNode *p, TreeNode *q) {
         // Start typing your C/C++ solution below
