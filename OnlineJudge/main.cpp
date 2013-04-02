@@ -25,6 +25,8 @@
 #include "BalancedBinaryTreeSolution.h"
 #include "BinaryTreeLevelOrderTraversalSolution.h"
 #include "BinaryTreeLevelOrderTraversalSolutionII.h"
+#include "ConstructBinaryTreeFromInorderAndPostorderTraversalSolution.h"
+#include "ConstructBinaryTreeFromPreorderAndInorderTraversalSolution.h"
 
 using std::cout;
 using std::endl;
@@ -91,6 +93,24 @@ int main(int argc, const char * argv[])
 //        lpNode = lpNode->right;
 //    }
 //    cout << endl;
+    
+//    vector<int> inorder, postorder;
+//    inorder.push_back(1);
+//    inorder.push_back(2);
+//    inorder.push_back(3);
+//    postorder.push_back(3);
+//    postorder.push_back(2);
+//    postorder.push_back(1);
+//    ConstructBinaryTreeFromInorderAndPostorderTraversalSolution solution;
+//    solution.buildTree(inorder, postorder);
+    
+    vector<int> preorder, inorder;
+    preorder.push_back(1);
+    preorder.push_back(2);
+    inorder.push_back(2);
+    inorder.push_back(1);
+    ConstructBinaryTreeFromPreorderAndInorderTraversalSolution solution;
+    solution.buildTree(preorder, inorder);
     
     return EXIT_SUCCESS;
 }
