@@ -29,6 +29,7 @@
 #include "ConstructBinaryTreeFromPreorderAndInorderTraversalSolution.h"
 #include "MaximumDepthOfBinaryTreeSolution.h"
 #include "BinaryTreeZigzagLevelOrderTraversalSolution.h"
+#include "SymmetricTreeSolution.h"
 
 using std::cout;
 using std::endl;
