@@ -1,5 +1,5 @@
 //
-//  SymmetricTreeSolution.h
+//  SymmetricTreeSolutionII.h
 //  OnlineJudge
 //
 //  Created by Yanling Zhi on 4/2/13.
@@ -64,10 +64,8 @@ public:
             pLeft = leftNodes.top(); leftNodes.pop();
             pRight = rightNodes.top(); rightNodes.pop();
             if (pLeft && pRight && pLeft->val == pRight->val) {
-                leftNodes.push(pLeft->right);
-                leftNodes.push(pLeft->left);
-                rightNodes.push(pRight->left);
-                rightNodes.push(pRight->right);
+                leftNodes.push(pLeft->right), leftNodes.push(pLeft->left);
+                rightNodes.push(pRight->left), rightNodes.push(pRight->right);
             }
             else if (pLeft == NULL && pRight == NULL) {
                 continue;

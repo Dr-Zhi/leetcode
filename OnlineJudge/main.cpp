@@ -31,6 +31,8 @@
 #include "BinaryTreeZigzagLevelOrderTraversalSolution.h"
 #include "SymmetricTreeSolution.h"
 #include "SymmetricTreeSolutionII.h"
+#include "SameTreeSolution.h"
+#include "SameTreeSolutionRecursive.h"
 
 using std::cout;
 using std::endl;
