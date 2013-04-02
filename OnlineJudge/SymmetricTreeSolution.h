@@ -41,6 +41,7 @@ struct TreeNode {
      3    3
  * Note: bonus points if you could solve it both recursively and 
  * iteratively.
+ * This is a recursive version.
  */
 class SymmetricTreeSolution {
 public:

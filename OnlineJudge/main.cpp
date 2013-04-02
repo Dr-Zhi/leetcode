@@ -30,6 +30,7 @@
 #include "MaximumDepthOfBinaryTreeSolution.h"
 #include "BinaryTreeZigzagLevelOrderTraversalSolution.h"
 #include "SymmetricTreeSolution.h"
+#include "SymmetricTreeSolutionII.h"
 
 using std::cout;
 using std::endl;
@@ -107,13 +108,13 @@ int main(int argc, const char * argv[])
 //    ConstructBinaryTreeFromInorderAndPostorderTraversalSolution solution;
 //    solution.buildTree(inorder, postorder);
     
-    vector<int> preorder, inorder;
-    preorder.push_back(1);
-    preorder.push_back(2);
-    inorder.push_back(2);
-    inorder.push_back(1);
-    ConstructBinaryTreeFromPreorderAndInorderTraversalSolution solution;
-    solution.buildTree(preorder, inorder);
+//    vector<int> preorder, inorder;
+//    preorder.push_back(1);
+//    preorder.push_back(2);
+//    inorder.push_back(2);
+//    inorder.push_back(1);
+//    ConstructBinaryTreeFromPreorderAndInorderTraversalSolution solution;
+//    solution.buildTree(preorder, inorder);
     
     return EXIT_SUCCESS;
 }

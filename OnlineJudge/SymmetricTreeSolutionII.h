@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Dr. Zhi Inc. All rights reserved.
 //
 
-#ifndef OnlineJudge_SymmetricTreeSolution_h
-#define OnlineJudge_SymmetricTreeSolution_h
+#ifndef OnlineJudge_SymmetricTreeSolutionII_h
+#define OnlineJudge_SymmetricTreeSolutionII_h
 
 #include <stack>
 
@@ -56,9 +56,27 @@ public:
             return true;
         }
 
-        stack<TreeNode *> nodes;
-        retuk
-
+        stack<TreeNode *> leftNodes, rightNodes; // LIFO
+        leftNodes.push(root->left);
+        rightNodes.push(root->right);
+        TreeNode * pLeft, * pRight;
+        while (!leftNodes.empty() && !rightNodes.empty()) {
+            pLeft = leftNodes.top(); leftNodes.pop();
+            pRight = rightNodes.top(); rightNodes.pop();
+            if (pLeft && pRight && pLeft->val == pRight->val) {
+                leftNodes.push(pLeft->right);
+                leftNodes.push(pLeft->left);
+                rightNodes.push(pRight->left);
+                rightNodes.push(pRight->right);
+            }
+            else if (pLeft == NULL && pRight == NULL) {
+                continue;
+            }
+            else { // asymmetric
+                return false;
+            }
+        }
+        return true;
     }
 };
 
