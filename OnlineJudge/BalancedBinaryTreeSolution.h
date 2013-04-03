@@ -50,9 +50,6 @@ private:
         }
         bool rightBalanced = (root->right == NULL) ||
                              isBalancedRecursive(root->right, rightHeight);
-        if (rightBalanced == false) { // return early
-            return false;
-        }
         height = max(leftHeight, rightHeight) + 1;
         return leftBalanced && rightBalanced &&
                abs(leftHeight-rightHeight) <= 1;
