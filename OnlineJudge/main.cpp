@@ -29,10 +29,12 @@
 #include "ConstructBinaryTreeFromPreorderAndInorderTraversalSolution.h"
 #include "MaximumDepthOfBinaryTreeSolution.h"
 #include "BinaryTreeZigzagLevelOrderTraversalSolution.h"
-#include "SymmetricTreeSolution.h"
-#include "SymmetricTreeSolutionII.h"
-#include "SameTreeSolution.h"
+#include "SymmetricTreeSolutionIterative.h"
+#include "SymmetricTreeSolutionRecursive.h"
+#include "SameTreeSolutionIterative.h"
 #include "SameTreeSolutionRecursive.h"
+#include "ValidateBinarySearchTreeSolution.h"
+#include "InterleavingStringSolution.h"
 
 using std::cout;
 using std::endl;
@@ -117,6 +119,10 @@ int main(int argc, const char * argv[])
 //    inorder.push_back(1);
 //    ConstructBinaryTreeFromPreorderAndInorderTraversalSolution solution;
 //    solution.buildTree(preorder, inorder);
+    
+    string s1("aa"), s2("ab"), s3("aaba");
+    InterleavingStringSolution solution;
+    solution.isInterleave(s1, s2, s3);
     
     return EXIT_SUCCESS;
 }
