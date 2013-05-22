@@ -57,7 +57,7 @@ public:
         }
         
         // inorder: left -> root -> right, postorder: left -> right -> root
-        if (pos < right) {
+        if (pos+1 < right) {
             root->right = buildTreeRecursive(inorder, pos+1, right,
                                              postorder, rootPos-1);
         }

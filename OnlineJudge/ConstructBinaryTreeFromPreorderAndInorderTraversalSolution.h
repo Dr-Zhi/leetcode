@@ -59,7 +59,7 @@ public:
             root->left = buildTreeRecursive(preorder, rootPos+1,
                                             inorder, left, pos);
         }
-        if (pos < right) {
+        if (pos+1 < right) {
             root->right = buildTreeRecursive(preorder, rootPos+pos-left+1,
                                              inorder, pos+1, right);
         }

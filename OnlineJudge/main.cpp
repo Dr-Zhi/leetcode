@@ -35,6 +35,7 @@
 #include "SameTreeSolutionRecursive.h"
 #include "ValidateBinarySearchTreeSolution.h"
 #include "InterleavingStringSolution.h"
+#include "MergeTwoSortedListsSolution.h"
 
 using std::cout;
 using std::endl;
@@ -102,15 +103,15 @@ int main(int argc, const char * argv[])
 //    }
 //    cout << endl;
     
-//    vector<int> inorder, postorder;
-//    inorder.push_back(1);
-//    inorder.push_back(2);
-//    inorder.push_back(3);
-//    postorder.push_back(3);
-//    postorder.push_back(2);
-//    postorder.push_back(1);
-//    ConstructBinaryTreeFromInorderAndPostorderTraversalSolution solution;
-//    solution.buildTree(inorder, postorder);
+    vector<int> inorder, postorder;
+    inorder.push_back(1);
+    inorder.push_back(3);
+    inorder.push_back(2);
+    postorder.push_back(3);
+    postorder.push_back(2);
+    postorder.push_back(1);
+    ConstructBinaryTreeFromInorderAndPostorderTraversalSolution solution;
+    solution.buildTree(inorder, postorder);
     
 //    vector<int> preorder, inorder;
 //    preorder.push_back(1);
@@ -120,9 +121,15 @@ int main(int argc, const char * argv[])
 //    ConstructBinaryTreeFromPreorderAndInorderTraversalSolution solution;
 //    solution.buildTree(preorder, inorder);
     
-    string s1("aa"), s2("ab"), s3("aaba");
-    InterleavingStringSolution solution;
-    solution.isInterleave(s1, s2, s3);
+//    string s1("aa"), s2("ab"), s3("aaba");
+//    InterleavingStringSolution solution;
+//    solution.isInterleave(s1, s2, s3);
+    
+//    ListNode node1(1), node2(2), node4(4), node5(5);
+//    node1.next = &node2;
+//    node2.next = &node4;
+//    MergeTwoSortedListsSolution solution;
+//    solution.mergeTwoLists(&node1, &node5);
     
     return EXIT_SUCCESS;
 }
