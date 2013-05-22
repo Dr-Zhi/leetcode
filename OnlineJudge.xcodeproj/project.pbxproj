@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B25600B216F4390200E9F093 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B25600B116F4390200E9F093 /* main.cpp */; };
+		B25600B416F4390200E9F093 /* OnlineJudge.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B25600B316F4390200E9F093 /* OnlineJudge.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B25600AC16F4390200E9F093 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				B25600B416F4390200E9F093 /* OnlineJudge.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B21612E216FDD0D10018FC4F /* PathSumSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathSumSolution.h; sourceTree = "<group>"; };
+		B21612E316FEB4E40018FC4F /* PathSumIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathSumIISolution.h; sourceTree = "<group>"; };
+		B21612E516FEE1B10018FC4F /* MinimumDepthOfBinaryTreeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinimumDepthOfBinaryTreeSolution.h; sourceTree = "<group>"; };
+		B21612E71700457B0018FC4F /* BalancedBinaryTreeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalancedBinaryTreeSolution.h; sourceTree = "<group>"; };
+		B21612E8170144770018FC4F /* ConvertSortedArrayToBinarySearchTreeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertSortedArrayToBinarySearchTreeSolution.h; sourceTree = "<group>"; };
+		B21612E9170181120018FC4F /* ConvertSortedListToBinarySearchTreeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertSortedListToBinarySearchTreeSolution.h; sourceTree = "<group>"; };
+		B21612EA170321EA0018FC4F /* BinaryTreeLevelOrderTraversalSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeLevelOrderTraversalSolution.h; sourceTree = "<group>"; };
+		B21612EB170329A60018FC4F /* BinaryTreeLevelOrderTraversalSolutionII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeLevelOrderTraversalSolutionII.h; sourceTree = "<group>"; };
+		B21612EC17032EC00018FC4F /* BinaryTreePrintLevelOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreePrintLevelOrder.h; sourceTree = "<group>"; };
+		B21613271703C7680018FC4F /* BinaryTreeLevelOrderTraversalIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeLevelOrderTraversalIISolution.h; sourceTree = "<group>"; };
+		B2161328170547070018FC4F /* ConstructBinaryTreeFromInorderAndPostorderTraversalSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructBinaryTreeFromInorderAndPostorderTraversalSolution.h; sourceTree = "<group>"; };
+		B2161329170985430018FC4F /* ConstructBinaryTreeFromPreorderAndInorderTraversalSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructBinaryTreeFromPreorderAndInorderTraversalSolution.h; sourceTree = "<group>"; };
+		B216132A170A6B250018FC4F /* MaximumDepthOfBinaryTreeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaximumDepthOfBinaryTreeSolution.h; sourceTree = "<group>"; };
+		B216132B170A713C0018FC4F /* BinaryTreeZigzagLevelOrderTraversalSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeZigzagLevelOrderTraversalSolution.h; sourceTree = "<group>"; };
+		B216132C170A8B280018FC4F /* SymmetricTreeSolutionRecursive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymmetricTreeSolutionRecursive.h; sourceTree = "<group>"; };
+		B216132E170ABB3C0018FC4F /* SymmetricTreeSolutionIterative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymmetricTreeSolutionIterative.h; sourceTree = "<group>"; };
+		B216132F170AC18A0018FC4F /* SameTreeSolutionIterative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameTreeSolutionIterative.h; sourceTree = "<group>"; };
+		B2161330170ACD0E0018FC4F /* SameTreeSolutionRecursive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameTreeSolutionRecursive.h; sourceTree = "<group>"; };
+		B2161331170C007D0018FC4F /* ValidateBinarySearchTreeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateBinarySearchTreeSolution.h; sourceTree = "<group>"; };
+		B2161332170C05FD0018FC4F /* InterleavingStringSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterleavingStringSolution.h; sourceTree = "<group>"; };
+		B25600AE16F4390200E9F093 /* OnlineJudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OnlineJudge; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25600B116F4390200E9F093 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B25600B316F4390200E9F093 /* OnlineJudge.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OnlineJudge.1; sourceTree = "<group>"; };
+		B25C6EC816F4670F00E42916 /* PolulatingNextRightPointersInEachNodeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolulatingNextRightPointersInEachNodeSolution.h; sourceTree = "<group>"; };
+		B25C6EC916F4789E00E42916 /* PolulatingNextRightPointersInEachNodeIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolulatingNextRightPointersInEachNodeIISolution.h; sourceTree = "<group>"; };
+		B26E24AA16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestTimetoBuyandSellStockSolutionI.h; sourceTree = "<group>"; };
+		B26E24AB16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestTimetoBuyandSellStockSolutionII.h; sourceTree = "<group>"; };
+		B26E24AC16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionIII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestTimetoBuyandSellStockSolutionIII.h; sourceTree = "<group>"; };
+		B26E24AD16F4398D002152D0 /* BinaryTreeMaximumPathSumSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeMaximumPathSumSolution.h; sourceTree = "<group>"; };
+		B26E24AE16F4398D002152D0 /* MinimumPathSumOnTriangleSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinimumPathSumOnTriangleSolution.h; sourceTree = "<group>"; };
+		B26E24AF16F4398D002152D0 /* PascalTriangleIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PascalTriangleIISolution.h; sourceTree = "<group>"; };
+		B26E24B016F4398D002152D0 /* PascalTriangleSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PascalTriangleSolution.h; sourceTree = "<group>"; };
+		B26E24B116F4398D002152D0 /* ValidPalindromeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidPalindromeSolution.h; sourceTree = "<group>"; };
+		B2AB4A7A16FAA055007BF40E /* FlattenBinaryTreeToLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlattenBinaryTreeToLinkedList.h; sourceTree = "<group>"; };
+		B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedListsSolution.h; sourceTree = "<group>"; };
+		B2DCE7BB1749D91A0057B6EC /* MergeTwoSortedArraysSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedArraysSolution.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B25600AB16F4390200E9F093 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B25600A516F4390200E9F093 = {
+			isa = PBXGroup;
+			children = (
+				B25600B016F4390200E9F093 /* OnlineJudge */,
+				B25600AF16F4390200E9F093 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B25600AF16F4390200E9F093 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B25600AE16F4390200E9F093 /* OnlineJudge */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B25600B016F4390200E9F093 /* OnlineJudge */ = {
+			isa = PBXGroup;
+			children = (
+				B2161332170C05FD0018FC4F /* InterleavingStringSolution.h */,
+				B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */,
+				B2DCE7BB1749D91A0057B6EC /* MergeTwoSortedArraysSolution.h */,
+				B2161331170C007D0018FC4F /* ValidateBinarySearchTreeSolution.h */,
+				B216132F170AC18A0018FC4F /* SameTreeSolutionIterative.h */,
+				B2161330170ACD0E0018FC4F /* SameTreeSolutionRecursive.h */,
+				B216132C170A8B280018FC4F /* SymmetricTreeSolutionRecursive.h */,
+				B216132E170ABB3C0018FC4F /* SymmetricTreeSolutionIterative.h */,
+				B216132B170A713C0018FC4F /* BinaryTreeZigzagLevelOrderTraversalSolution.h */,
+				B216132A170A6B250018FC4F /* MaximumDepthOfBinaryTreeSolution.h */,
+				B21612E516FEE1B10018FC4F /* MinimumDepthOfBinaryTreeSolution.h */,
+				B21612E8170144770018FC4F /* ConvertSortedArrayToBinarySearchTreeSolution.h */,
+				B21612E9170181120018FC4F /* ConvertSortedListToBinarySearchTreeSolution.h */,
+				B21612EA170321EA0018FC4F /* BinaryTreeLevelOrderTraversalSolution.h */,
+				B21612EB170329A60018FC4F /* BinaryTreeLevelOrderTraversalSolutionII.h */,
+				B21613271703C7680018FC4F /* BinaryTreeLevelOrderTraversalIISolution.h */,
+				B2161328170547070018FC4F /* ConstructBinaryTreeFromInorderAndPostorderTraversalSolution.h */,
+				B2161329170985430018FC4F /* ConstructBinaryTreeFromPreorderAndInorderTraversalSolution.h */,
+				B21612EC17032EC00018FC4F /* BinaryTreePrintLevelOrder.h */,
+				B21612E71700457B0018FC4F /* BalancedBinaryTreeSolution.h */,
+				B21612E316FEB4E40018FC4F /* PathSumIISolution.h */,
+				B21612E216FDD0D10018FC4F /* PathSumSolution.h */,
+				B2AB4A7A16FAA055007BF40E /* FlattenBinaryTreeToLinkedList.h */,
+				B25C6EC816F4670F00E42916 /* PolulatingNextRightPointersInEachNodeSolution.h */,
+				B25C6EC916F4789E00E42916 /* PolulatingNextRightPointersInEachNodeIISolution.h */,
+				B26E24AA16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionI.h */,
+				B26E24AB16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionII.h */,
+				B26E24AC16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionIII.h */,
+				B26E24AD16F4398D002152D0 /* BinaryTreeMaximumPathSumSolution.h */,
+				B26E24AE16F4398D002152D0 /* MinimumPathSumOnTriangleSolution.h */,
+				B26E24AF16F4398D002152D0 /* PascalTriangleIISolution.h */,
+				B26E24B016F4398D002152D0 /* PascalTriangleSolution.h */,
+				B26E24B116F4398D002152D0 /* ValidPalindromeSolution.h */,
+				B25600B116F4390200E9F093 /* main.cpp */,
+				B25600B316F4390200E9F093 /* OnlineJudge.1 */,
+			);
+			path = OnlineJudge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B25600AD16F4390200E9F093 /* OnlineJudge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B25600B716F4390200E9F093 /* Build configuration list for PBXNativeTarget "OnlineJudge" */;
+			buildPhases = (
+				B25600AA16F4390200E9F093 /* Sources */,
+				B25600AB16F4390200E9F093 /* Frameworks */,
+				B25600AC16F4390200E9F093 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnlineJudge;
+			productName = OnlineJudge;
+			productReference = B25600AE16F4390200E9F093 /* OnlineJudge */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B25600A616F4390200E9F093 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Dr. Zhi Inc.";
+			};
+			buildConfigurationList = B25600A916F4390200E9F093 /* Build configuration list for PBXProject "OnlineJudge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B25600A516F4390200E9F093;
+			productRefGroup = B25600AF16F4390200E9F093 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B25600AD16F4390200E9F093 /* OnlineJudge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B25600AA16F4390200E9F093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25600B216F4390200E9F093 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B25600B516F4390200E9F093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B25600B616F4390200E9F093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B25600B816F4390200E9F093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B25600B916F4390200E9F093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B25600A916F4390200E9F093 /* Build configuration list for PBXProject "OnlineJudge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25600B516F4390200E9F093 /* Debug */,
+				B25600B616F4390200E9F093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B25600B716F4390200E9F093 /* Build configuration list for PBXNativeTarget "OnlineJudge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25600B816F4390200E9F093 /* Debug */,
+				B25600B916F4390200E9F093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B25600A616F4390200E9F093 /* Project object */;
+}
