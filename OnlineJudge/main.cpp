@@ -36,6 +36,7 @@
 #include "ValidateBinarySearchTreeSolution.h"
 #include "InterleavingStringSolution.h"
 #include "MergeTwoSortedListsSolution.h"
+#include "InsertIntervalSolution.h"
 
 using std::cout;
 using std::endl;
@@ -130,6 +131,15 @@ int main(int argc, const char * argv[])
 //    node2.next = &node4;
 //    MergeTwoSortedListsSolution solution;
 //    solution.mergeTwoLists(&node1, &node5);
+    
+    vector<Interval> intervals;
+    intervals.push_back(Interval(2, 4));
+    intervals.push_back(Interval(5, 7));
+    intervals.push_back(Interval(8, 10));
+    intervals.push_back(Interval(11, 13));
+    Interval newInterval(3, 8);
+    InsertIntervalSolution insertIntervalSolution;
+    insertIntervalSolution.insert(intervals, newInterval);
     
     return EXIT_SUCCESS;
 }
