@@ -59,7 +59,9 @@
 		B26E24B016F4398D002152D0 /* PascalTriangleSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PascalTriangleSolution.h; sourceTree = "<group>"; };
 		B26E24B116F4398D002152D0 /* ValidPalindromeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidPalindromeSolution.h; sourceTree = "<group>"; };
 		B28C8DCA1759BFC700F0C34A /* InsertIntervalSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertIntervalSolution.h; sourceTree = "<group>"; };
+		B28C8DCB175A0CBE00F0C34A /* lengthOfLastWordSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lengthOfLastWordSolution.h; sourceTree = "<group>"; };
 		B2AB4A7A16FAA055007BF40E /* FlattenBinaryTreeToLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlattenBinaryTreeToLinkedList.h; sourceTree = "<group>"; };
+		B2AC3C801769BFFE00B652CC /* PowerOfXSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerOfXSolution.h; sourceTree = "<group>"; };
 		B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedListsSolution.h; sourceTree = "<group>"; };
 		B2DCE7BB1749D91A0057B6EC /* MergeTwoSortedArraysSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedArraysSolution.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +96,9 @@
 		B25600B016F4390200E9F093 /* OnlineJudge */ = {
 			isa = PBXGroup;
 			children = (
+				B2AC3C801769BFFE00B652CC /* PowerOfXSolution.h */,
 				B28C8DCA1759BFC700F0C34A /* InsertIntervalSolution.h */,
+				B28C8DCB175A0CBE00F0C34A /* lengthOfLastWordSolution.h */,
 				B2161332170C05FD0018FC4F /* InterleavingStringSolution.h */,
 				B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */,
 				B2DCE7BB1749D91A0057B6EC /* MergeTwoSortedArraysSolution.h */,

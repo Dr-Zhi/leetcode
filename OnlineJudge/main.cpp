@@ -37,6 +37,7 @@
 #include "InterleavingStringSolution.h"
 #include "MergeTwoSortedListsSolution.h"
 #include "InsertIntervalSolution.h"
+#include "PowerOfXSolution.h"
 
 using std::cout;
 using std::endl;
