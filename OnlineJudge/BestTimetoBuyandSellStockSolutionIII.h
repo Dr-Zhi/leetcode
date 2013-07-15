@@ -27,31 +27,19 @@ public:
     int maxProfit(vector<int> &prices) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        if (prices.size() < 2) {
-            return 0;
-        }
-        
+        vector<int> profitRight(prices.size()+1, 0);
+        int maxPrice = INT_MIN, minPrice = INT_MAX, maxProfit = 0, profitSum = 0;
         int n = (int)prices.size();
-        vector<int> vProfitsSecond(n, 0);
-        int maxPrice = prices[n-1], maxProfitSecond = 0;
-        for (int i = n-2; i >= 0; --i) {
-            vProfitsSecond[i] = maxProfitSecond = max(maxProfitSecond, maxPrice - prices[i]);
+        for (int i = n-1; i >= 0; --i) {
             maxPrice = max(maxPrice, prices[i]);
+            profitRight[i] = max(profitRight[i+1], maxPrice - prices[i]);
         }
-        
-        vector<int> vProfitsFirst(n, 0);
-        int minPrice = prices[0], maxProfitFirst = 0;
-        for (int i = 1; i < n; ++i) {
-            vProfitsFirst[i] = maxProfitFirst = max(maxProfitFirst, prices[i]-minPrice);
+        for (int i = 0; i < n; ++i) {
             minPrice = min(minPrice, prices[i]);
+            maxProfit = max(maxProfit, prices[i]-minPrice);
+            profitSum = max(profitSum, maxProfit + profitRight[i+1]);
         }
-        
-        int maxProfit = 0;
-        for (int i = 0; i < n-1; ++i) {
-            maxProfit = max(maxProfit, vProfitsFirst[i]+vProfitsSecond[i]);
-        }
-        
-        return maxProfit;
+        return profitSum;
     }
 };
 

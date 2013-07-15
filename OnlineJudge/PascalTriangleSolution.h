@@ -31,21 +31,18 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         vector<vector<int> > triangle;
-        if (numRows <= 0) {
+        if (numRows <= 0)
             return triangle;
-        }
-        vector<int> previousLine;
-        vector<int> currentLine(1, 1);
-        triangle.push_back(currentLine);
+        vector<int> row(1, 1);
+        row.reserve(numRows);
+        triangle.push_back(row);
         for (int i = 1; i < numRows; ++i) {
-            swap(previousLine, currentLine);
-            currentLine.resize(i+1);
-            currentLine[0] = previousLine[0];
-            for (int j = 1; j < i; ++j) {
-                currentLine[j] = previousLine[j-1]+previousLine[j];
+            row.resize(i+1);
+            row[i] = row[i-1];
+            for (int j = i-1; j >= 1; --j) {
+                row[j] += row[j-1];
             }
-            currentLine[i] = previousLine[i-1];
-            triangle.push_back(currentLine);
+            triangle.push_back(row);
         }
         return triangle;
     }

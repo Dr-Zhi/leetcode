@@ -26,13 +26,14 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         vector<int> row;
-        if (rowIndex < 0) {
+        if (rowIndex < 0)
             return row;
-        }
         row.resize(rowIndex+1);
         row[0] = 1;
-        for (int i = 1; i < rowIndex+1; ++i) {
-            row[i] = row[i-1] * (rowIndex+1-i) / i;
+        for (int i = 1; i <= rowIndex; ++i) {
+            row[i] = row[i-1];
+            for (int j = i-1; j >= 1; --j)
+                row[j] += row[j-1];
         }
         return row;
     }
@@ -44,17 +45,15 @@ public:
         }
         row.resize(rowIndex+1);
         row[0] = 1;
-        vector<int> prevRow(rowIndex+1);
-        for (int i = 1; i <= rowIndex; ++i) {
-            std::swap(row, prevRow);
-            row[0] = prevRow[0];
-            for (int j = 1; j < i; ++j) {
-                row[j] = prevRow[j-1]+prevRow[j];
-            }
-            row[i] = prevRow[i-1];
+        // note that row[i] = C^i_{rowIndex}, yet this method is not good
+        // as it may cause multiplication overflow
+        for (int i = 1; i < rowIndex+1; ++i) {
+            row[i] = row[i-1] * (rowIndex+1-i) / i;
         }
         return row;
     }
+    
+
 };
 
 #endif

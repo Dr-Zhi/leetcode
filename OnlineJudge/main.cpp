@@ -38,6 +38,7 @@
 #include "MergeTwoSortedListsSolution.h"
 #include "InsertIntervalSolution.h"
 #include "PowerOfXSolution.h"
+#include "FlattenBinaryTreeToLinkedList.h"
 
 using std::cout;
 using std::endl;

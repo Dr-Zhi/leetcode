@@ -51,30 +51,28 @@ public:
     vector<vector<int> > levelOrderBottom(TreeNode *root) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        vector<TreeNode *> curLevelNodes, nextLevelNodes;
-        vector<int> curRow;
-        vector<vector<int> > rows;
+        vector<vector<int> > result;
+        vector<int> level;
+        vector<TreeNode *> nodes, nextNodes;
         if (root) {
-            curLevelNodes.push_back(root);
+            nodes.push_back(root);
         }
-        while (!curLevelNodes.empty()) {
-            for (size_t i = 0; i < curLevelNodes.size(); ++i) {
-                TreeNode * pNode = curLevelNodes[i];
-                curRow.push_back(pNode->val);
-                if (pNode->left) {
-                    nextLevelNodes.push_back(pNode->left);
-                }
-                if (pNode->right) {
-                    nextLevelNodes.push_back(pNode->right);
-                }
+        while (!nodes.empty()) {
+            for (int i = 0; i < nodes.size(); ++i) {
+                TreeNode * node = nodes[i];
+                level.push_back(node->val);
+                if (node->left)
+                    nextNodes.push_back(node->left);
+                if (node->right)
+                    nextNodes.push_back(node->right);
             }
-            rows.push_back(curRow);
-            curRow.clear();
-            curLevelNodes.clear();
-            swap(curLevelNodes, nextLevelNodes);
+            result.push_back(level);
+            level.clear();
+            swap(nodes, nextNodes);
+            nextNodes.clear();
         }
-        reverse(rows.begin(), rows.end()); // reverse the rows
-        return rows;
+        reverse(result.begin(), result.end());
+        return result;
     }
 };
 

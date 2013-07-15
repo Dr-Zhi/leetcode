@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Dr. Zhi Inc. All rights reserved.
 //
 
-#ifndef LeetCode_Solutions_MinimumPathSumOnTriangleSolution_h
-#define LeetCode_Solutions_MinimumPathSumOnTriangleSolution_h
+#ifndef OnlineJudge_TriangleSolution_h
+#define OnlineJudge_TriangleSolution_h
 
 #include <cassert>
 
@@ -28,29 +28,25 @@ using std::vector;
  Note: Bonus point if you are able to do this using only O(n) extra space,
  where n is the total number of rows in the triangle.
  */
-class MinimumPathSumOnTriangleSolution {
+class TriangleSolution {
 public:
     int minimumTotal(vector<vector<int> > &triangle) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        if (triangle.size() == 0) {
+        if (triangle.size() == 0)
             return 0;
-        }
-        vector<int> prevMinSums(triangle.size(), 0);
-        vector<int> curMinSums(triangle.size(), 0);
-        curMinSums[0] = triangle[0][0];
-
-        for (size_t i = 1; i < triangle.size(); ++i) {
-            std::swap(prevMinSums, curMinSums);
-            size_t n = triangle[i].size();
-            assert(n == i+1);
-            curMinSums[0] = prevMinSums[0] + triangle[i][0];
-            for (size_t j = 1; j < n-1; ++j) {
-                    curMinSums[j] = std::min(prevMinSums[j-1], prevMinSums[j]) + triangle[i][j];
+        vector<int> pathSum(triangle.size(), 0);
+        pathSum[0] = triangle[0][0];
+        for (int i = 1; i < triangle.size(); ++i) {
+            // note that the i-th value is dependent on the (i-1)-th value
+            // so we compute the values from i-th to 0-th
+            pathSum[i] = pathSum[i-1] + triangle[i][i];
+            for (int j = i-1; j >= 1; --j) {
+                pathSum[j] = min(pathSum[j-1], pathSum[j]) + triangle[i][j];
             }
-            curMinSums[n-1] = prevMinSums[n-2] + triangle[i][n-1];
+            pathSum[0] += triangle[i][0];
         }
-        return *std::min_element(curMinSums.begin(), curMinSums.end());
+        return *min_element(pathSum.begin(), pathSum.end());
     }
 };
 

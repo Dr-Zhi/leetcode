@@ -10,6 +10,7 @@
 #define LeetCode_Solutions_BestTimetoBuyandSellStockSolution_h
 
 #include <vector>
+#include <algorithm>
 
 using std::vector;
 using std::max;
@@ -26,49 +27,12 @@ public:
     int maxProfit(vector<int> &prices) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        int maxProfit = 0, lowestPriceSoFar = INT_MAX, localMaxProfit;
-        for (size_t i = 0; i < prices.size(); ++i) {
-            if (lowestPriceSoFar > prices[i])
-                lowestPriceSoFar = prices[i];
-            localMaxProfit = prices[i] - lowestPriceSoFar;
-            if (maxProfit < localMaxProfit)
-                maxProfit = localMaxProfit;
-        }
-        return maxProfit;
-    }
-    
-    int maxProfit_V2(vector<int> &prices) {
-        if (prices.size() < 2) {
-            return 0;
-        }
-        int maxProfit = 0, profit = 0, priceToBuy = prices[0];
-        for (size_t i = 1; i < prices.size(); ++i) {
-            profit += prices[i] - prices[i-1];
-            if (maxProfit < profit) {
-                maxProfit = profit;
-            }
-            if (priceToBuy > prices[i]) {
-                priceToBuy = prices[i];
-                profit = 0;
-            }
-
-        }
-        
-        return maxProfit;
-    }
-    
-    int maxProfit_V3(vector<int> &prices) {
-        if (prices.size() < 2) {
-            return 0;
-        }
-        int maxProfit = 0, minPrice = prices[0];
-        for (int i = 1; i < prices.size(); ++i) {
-            maxProfit = max(maxProfit, prices[i]-minPrice);
+        int maxProfit = 0, minPrice = INT_MAX;
+        for (int i = 0; i < prices.size(); ++i) {
             minPrice = min(minPrice, prices[i]);
+            maxProfit = max(maxProfit, prices[i]-minPrice);
         }
-        
         return maxProfit;
-    }
-    
+    }    
 };
 #endif

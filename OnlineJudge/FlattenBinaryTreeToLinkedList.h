@@ -47,22 +47,23 @@ public:
     void flatten(TreeNode *root) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        if (root == NULL) {
+        if (!root) {
             return;
         }
         flatten(root->left);
         flatten(root->right);
         
-        TreeNode * lpLeftLeef = root->left;
-        while (lpLeftLeef && lpLeftLeef->right) {
-            lpLeftLeef = lpLeftLeef->right;
+        TreeNode * leftTail = root->left;
+        while (leftTail && leftTail->right) {
+            leftTail = leftTail->right;
         }
-        if (lpLeftLeef) {
-            lpLeftLeef->right = root->right;
+        if (leftTail) {
+            leftTail->right = root->right;
             root->right = root->left;
             root->left = NULL;
         }
     }
+    
 };
 
 #endif

@@ -26,11 +26,11 @@ public:
     bool isPalindrome(std::string s) {
         int i = 0, j = (int)s.size()-1;
         while(i < j) {
-            while(!isalnum(s[i]) && i <= j)
+            while(!isalnum(s[i]) && i < j)
                 ++i;
-            while(!isalnum(s[j]) && j >= i)
+            while(!isalnum(s[j]) && j > i)
                 --j;
-            if(i > j)
+            if(i >= j)
                 break;
             if (tolower(s[i]) != tolower(s[j])) {
                 return false;

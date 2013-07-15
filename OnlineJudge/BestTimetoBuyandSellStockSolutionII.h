@@ -21,70 +21,17 @@ using std::vector;
  * same time (ie, you must sell the stock before you buy again).
  */
 class BestTimetoBuyandSellStockSolutionII {
-    enum StockStatus {
-        bought,
-        sold,
-        nStatuses
-    };
 public:
     int maxProfit(vector<int> &prices) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        if (prices.size() < 2) {
-            return 0;
-        }
-        int profitSum = 0, priceToBuy = 0;
-        StockStatus status = sold;
-        for (int i = 0; i < (int)prices.size()-1; ++i) {
-            if (prices[i+1] > prices[i] && status == sold) {
-                priceToBuy = prices[i];
-                status = bought;
-            }
-            if (prices[i+1] < prices[i] && status == bought) {
-                profitSum += (prices[i] - priceToBuy);
-                status = sold;
-            }
-        }
-        int i = (int)prices.size()-1;
-        if (prices[i] >= prices[i-1] && status == bought) {
-            profitSum += (prices[i]-priceToBuy);
-            status = sold;
-        }
-        
-        return profitSum;
-    }
-    
-    int maxProfit_V2(vector<int> & prices) {
-        if (prices.size() < 2) {
-            return 0;
-        }
-        int profitSum = 0, priceToBuy = prices[0];
+        int maxProfit = 0;
         for (int i = 1; i < prices.size(); ++i) {
-            if (prices[i] > prices[i-1]) {
-                continue;
-            }
-            profitSum += prices[i-1] - priceToBuy;
-            priceToBuy = prices[i];
+            if (prices[i] - prices[i-1] > 0)
+                maxProfit += (prices[i] - prices[i-1]);
         }
-        profitSum += prices.back() - priceToBuy;
-        
-        return profitSum;
+        return maxProfit;
     }
-    
-    int maxProfit_V3(vector<int> & prices) {
-        if (prices.size() < 2) {
-            return 0;
-        }
-        int profitSum = 0;
-        for (int i = 1; i < prices.size(); ++i) {
-            if (prices[i] > prices[i-1]) {
-                profitSum += prices[i] - prices[i-1];
-            }
-        }
-        
-        return profitSum;
-    }
-    
 };
 
 
