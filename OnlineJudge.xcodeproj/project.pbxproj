@@ -47,6 +47,11 @@
 		B2161332170C05FD0018FC4F /* InterleavingStringSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterleavingStringSolution.h; sourceTree = "<group>"; };
 		B233807C1792BA800094D85F /* SubsetsSolutionRecursive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubsetsSolutionRecursive.h; sourceTree = "<group>"; };
 		B233807D1792BBCA0094D85F /* SubsetsSolutionIterative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubsetsSolutionIterative.h; sourceTree = "<group>"; };
+		B233807E179399C30094D85F /* AddBinarySolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBinarySolution.h; sourceTree = "<group>"; };
+		B233807F1797A1F10094D85F /* PartitionListSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartitionListSolution.h; sourceTree = "<group>"; };
+		B23380801797E2560094D85F /* ReverseIntegerSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseIntegerSolution.h; sourceTree = "<group>"; };
+		B23380811797E5910094D85F /* AddTwoNumbersSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTwoNumbersSolution.h; sourceTree = "<group>"; };
+		B23380821797EF2B0094D85F /* LowestCommonAncestorOfBinaryTreePartIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowestCommonAncestorOfBinaryTreePartIISolution.h; sourceTree = "<group>"; };
 		B25600AE16F4390200E9F093 /* OnlineJudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OnlineJudge; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25600B116F4390200E9F093 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B25600B316F4390200E9F093 /* OnlineJudge.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OnlineJudge.1; sourceTree = "<group>"; };
@@ -98,6 +103,8 @@
 		B25600B016F4390200E9F093 /* OnlineJudge */ = {
 			isa = PBXGroup;
 			children = (
+				B233807E179399C30094D85F /* AddBinarySolution.h */,
+				B23380821797EF2B0094D85F /* LowestCommonAncestorOfBinaryTreePartIISolution.h */,
 				B21612E71700457B0018FC4F /* BalancedBinaryTreeSolution.h */,
 				B26E24AA16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionI.h */,
 				B26E24AB16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionII.h */,
@@ -122,22 +129,25 @@
 				B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */,
 				B21612E516FEE1B10018FC4F /* MinimumDepthOfBinaryTreeSolution.h */,
 				B25600B316F4390200E9F093 /* OnlineJudge.1 */,
+				B233807F1797A1F10094D85F /* PartitionListSolution.h */,
 				B26E24AF16F4398D002152D0 /* PascalTriangleIISolution.h */,
 				B26E24B016F4398D002152D0 /* PascalTriangleSolution.h */,
 				B21612E316FEB4E40018FC4F /* PathSumIISolution.h */,
 				B21612E216FDD0D10018FC4F /* PathSumSolution.h */,
+				B23380811797E5910094D85F /* AddTwoNumbersSolution.h */,
 				B25C6EC916F4789E00E42916 /* PolulatingNextRightPointersInEachNodeIISolution.h */,
 				B25C6EC816F4670F00E42916 /* PolulatingNextRightPointersInEachNodeSolution.h */,
 				B2AC3C801769BFFE00B652CC /* PowerOfXSolution.h */,
+				B23380801797E2560094D85F /* ReverseIntegerSolution.h */,
 				B216132F170AC18A0018FC4F /* SameTreeSolutionIterative.h */,
 				B2161330170ACD0E0018FC4F /* SameTreeSolutionRecursive.h */,
+				B233807D1792BBCA0094D85F /* SubsetsSolutionIterative.h */,
+				B233807C1792BA800094D85F /* SubsetsSolutionRecursive.h */,
 				B216132E170ABB3C0018FC4F /* SymmetricTreeSolutionIterative.h */,
 				B216132C170A8B280018FC4F /* SymmetricTreeSolutionRecursive.h */,
 				B26E24AE16F4398D002152D0 /* TriangleSolution.h */,
 				B2161331170C007D0018FC4F /* ValidateBinarySearchTreeSolution.h */,
 				B26E24B116F4398D002152D0 /* ValidPalindromeSolution.h */,
-				B233807C1792BA800094D85F /* SubsetsSolutionRecursive.h */,
-				B233807D1792BBCA0094D85F /* SubsetsSolutionIterative.h */,
 			);
 			path = OnlineJudge;
 			sourceTree = "<group>";

@@ -8,7 +8,6 @@
 
 #include <iostream>
 
-
 #include "ConvertSortedListToBinarySearchTreeSolution.h"
 #include "ConvertSortedArrayToBinarySearchTreeSolution.h"
 #include "ValidPalindromeSolution.h"
@@ -16,7 +15,7 @@
 #include "BestTimetoBuyandSellStockSolutionI.h"
 #include "BestTimetoBuyandSellStockSolutionII.h"
 #include "BestTimetoBuyandSellStockSolutionIII.h"
-#include "MinimumPathSumOnTriangleSolution.h"
+#include "TriangleSolution.h"
 #include "PascalTriangleSolution.h"
 #include "PascalTriangleIISolution.h"
 #include "PolulatingNextRightPointersInEachNodeIISolution.h"
@@ -39,6 +38,8 @@
 #include "InsertIntervalSolution.h"
 #include "PowerOfXSolution.h"
 #include "FlattenBinaryTreeToLinkedList.h"
+#include "AddBinarySolution.h"
+#include "ReverseIntegerSolution.h"
 
 using std::cout;
 using std::endl;
@@ -106,15 +107,15 @@ int main(int argc, const char * argv[])
 //    }
 //    cout << endl;
     
-    vector<int> inorder, postorder;
-    inorder.push_back(1);
-    inorder.push_back(3);
-    inorder.push_back(2);
-    postorder.push_back(3);
-    postorder.push_back(2);
-    postorder.push_back(1);
-    ConstructBinaryTreeFromInorderAndPostorderTraversalSolution solution;
-    solution.buildTree(inorder, postorder);
+//    vector<int> inorder, postorder;
+//    inorder.push_back(1);
+//    inorder.push_back(3);
+//    inorder.push_back(2);
+//    postorder.push_back(3);
+//    postorder.push_back(2);
+//    postorder.push_back(1);
+//    ConstructBinaryTreeFromInorderAndPostorderTraversalSolution solution;
+//    solution.buildTree(inorder, postorder);
     
 //    vector<int> preorder, inorder;
 //    preorder.push_back(1);
@@ -134,14 +135,22 @@ int main(int argc, const char * argv[])
 //    MergeTwoSortedListsSolution solution;
 //    solution.mergeTwoLists(&node1, &node5);
     
-    vector<Interval> intervals;
-    intervals.push_back(Interval(2, 4));
-    intervals.push_back(Interval(5, 7));
-    intervals.push_back(Interval(8, 10));
-    intervals.push_back(Interval(11, 13));
-    Interval newInterval(3, 8);
-    InsertIntervalSolution insertIntervalSolution;
-    insertIntervalSolution.insert(intervals, newInterval);
+//    vector<Interval> intervals;
+//    intervals.push_back(Interval(2, 4));
+//    intervals.push_back(Interval(5, 7));
+//    intervals.push_back(Interval(8, 10));
+//    intervals.push_back(Interval(11, 13));
+//    Interval newInterval(3, 8);
+//    InsertIntervalSolution insertIntervalSolution;
+//    insertIntervalSolution.insert(intervals, newInterval);
+    
+//    AddBinarySolution addBinary;
+//    string a("0"), b("0");
+//    string c = addBinary.addBinary(a, b);
+//    cout << " a + b = " << c << endl;
+    
+    ReverseIntegerSolution reverseInteger;
+    cout << reverseInteger.reverse(-123) << endl;
     
     return EXIT_SUCCESS;
 }
