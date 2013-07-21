@@ -9,6 +9,9 @@
 #ifndef OnlineJudge_BalancedBinaryTreeSolution_h
 #define OnlineJudge_BalancedBinaryTreeSolution_h
 
+#include <algorithm>
+#include "Types.h"
+
 using std::max;
 
 /**

@@ -40,6 +40,9 @@
 #include "FlattenBinaryTreeToLinkedList.h"
 #include "AddBinarySolution.h"
 #include "ReverseIntegerSolution.h"
+#include "LowestCommonAncestorOfBinaryTreePartISolution.h"
+#include "LowestCommonAncestorOfBinaryTreePartIISolution.h"
+#include "SwapNodesInPairsSolution.h"
 
 using std::cout;
 using std::endl;

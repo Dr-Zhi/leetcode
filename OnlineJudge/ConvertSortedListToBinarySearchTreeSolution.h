@@ -9,27 +9,7 @@
 #ifndef OnlineJudge_ConvertSortedListToBinarySearchTreeSolution_h
 #define OnlineJudge_ConvertSortedListToBinarySearchTreeSolution_h
 
-/**
- * Definition for singly-linked list.
- */
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
-
-/** Binary tree node.
- */
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-    ~TreeNode() { // destroy subtrees, assume they are allocated by new
-        delete left;
-        delete right;
-    }
-};
+#include "Types.h"
 
 /** http://leetcode.com/onlinejudge#question_109
  * Given an array where elements are sorted in ascending order, convert it 

@@ -9,22 +9,10 @@
 #ifndef OnlineJudge_LowestCommonAncestorOfBinaryTreePartIISolution_h
 #define OnlineJudge_LowestCommonAncestorOfBinaryTreePartIISolution_h
 
-#include<algorithm>
+#include <algorithm>
+#include "Types.h"
 
 using std::swap;
-
-/** Binary tree node extended with parent node */
-struct TreeNodeExtended {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode *parent;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-    ~TreeNode() { // destroy subtrees, assume they are allocated by new
-        delete left;
-        delete right;
-    }
-};
 
 int getHeight(TreeNodeExtended *p) {
     int height = 0;
@@ -49,7 +37,7 @@ int getHeight(TreeNodeExtended *p) {
  * 2. remove (reuse) duplicated code inside a method
  * 3. swap some variables for convenience
  */
-TreeNodeExtended * LowestCommonAncestor(TreeNodeExtended *p, TreeNodeExtended *q) {
+TreeNodeExtended * LowestCommonAncestorPartII(TreeNodeExtended *p, TreeNodeExtended *q) {
     int h1 = getHeight(p), h2 = getHeight(q);
     if (h1 < h2) {
         swap(h1, h2);
