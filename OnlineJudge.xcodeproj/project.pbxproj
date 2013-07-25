@@ -58,6 +58,8 @@
 		B2338086179BDDD20094D85F /* PalindromeNumberSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PalindromeNumberSolution.h; sourceTree = "<group>"; };
 		B2338087179BE6530094D85F /* RemoveElementSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveElementSolution.h; sourceTree = "<group>"; };
 		B2338088179C157C0094D85F /* SwapNodesInPairsSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwapNodesInPairsSolution.h; sourceTree = "<group>"; };
+		B2338089179CE1010094D85F /* SearchInsertPositionSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchInsertPositionSolution.h; sourceTree = "<group>"; };
+		B233808A179CE69D0094D85F /* RemoveDuplicatesFromSortedListSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveDuplicatesFromSortedListSolution.h; sourceTree = "<group>"; };
 		B25600AE16F4390200E9F093 /* OnlineJudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OnlineJudge; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25600B116F4390200E9F093 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B25600B316F4390200E9F093 /* OnlineJudge.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OnlineJudge.1; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				B25C6EC916F4789E00E42916 /* PolulatingNextRightPointersInEachNodeIISolution.h */,
 				B25C6EC816F4670F00E42916 /* PolulatingNextRightPointersInEachNodeSolution.h */,
 				B2AC3C801769BFFE00B652CC /* PowerOfXSolution.h */,
+				B233808A179CE69D0094D85F /* RemoveDuplicatesFromSortedListSolution.h */,
 				B2338085179BD3910094D85F /* RemoveDuplicatesFromSortedArraySolution.h */,
 				B2338087179BE6530094D85F /* RemoveElementSolution.h */,
 				B23380801797E2560094D85F /* ReverseIntegerSolution.h */,
@@ -154,6 +157,7 @@
 				B233807D1792BBCA0094D85F /* SubsetsSolutionIterative.h */,
 				B233807C1792BA800094D85F /* SubsetsSolutionRecursive.h */,
 				B2338088179C157C0094D85F /* SwapNodesInPairsSolution.h */,
+				B2338089179CE1010094D85F /* SearchInsertPositionSolution.h */,
 				B216132E170ABB3C0018FC4F /* SymmetricTreeSolutionIterative.h */,
 				B216132C170A8B280018FC4F /* SymmetricTreeSolutionRecursive.h */,
 				B26E24AE16F4398D002152D0 /* TriangleSolution.h */,

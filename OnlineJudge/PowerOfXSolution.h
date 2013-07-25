@@ -11,17 +11,21 @@
 
 /** http://leetcode.com/onlinejudge#question_50
  * Implement pow(x, n).
+ *
+ * !Lesson learnt: 
+ * improve %2, /2 as &0x1, >>1.
  */
 class PowerOfXSolution {
 public:
     double pow(double x, int n) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
+        double result = 1.0;
         bool isNegative = (n < 0);
-        if (isNegative)  n = -n;
-        double result = 1;
+        if (isNegative) n = -n;
         while (n > 0) {
-            if (n & 1) result *= x;
+            if (n & 0x1)
+                result *= x;
             x *= x;
             n = n >> 1;
         }
