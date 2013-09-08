@@ -18,7 +18,7 @@
 #include "TriangleSolution.h"
 #include "PascalTriangleSolution.h"
 #include "PascalTriangleIISolution.h"
-#include "PolulatingNextRightPointersInEachNodeIISolution.h"
+#include "PopulatingNextRightPointersInEachNodeSolution.h"
 #include "PathSumIISolution.h"
 #include "MinimumDepthOfBinaryTreeSolution.h"
 #include "BalancedBinaryTreeSolution.h"
@@ -43,6 +43,8 @@
 #include "LowestCommonAncestorOfBinaryTreePartISolution.h"
 #include "LowestCommonAncestorOfBinaryTreePartIISolution.h"
 #include "SwapNodesInPairsSolution.h"
+#include "PathSumIISolution.h"
+#include "PopulatingNextRightPointersInEachNodeIISolution.h"
 
 using std::cout;
 using std::endl;
@@ -152,8 +154,12 @@ int main(int argc, const char * argv[])
 //    string c = addBinary.addBinary(a, b);
 //    cout << " a + b = " << c << endl;
     
-    ReverseIntegerSolution reverseInteger;
-    cout << reverseInteger.reverse(-123) << endl;
+//    ReverseIntegerSolution reverseInteger;
+//    cout << reverseInteger.reverse(-123) << endl;
+    
+    PathSumIISolution pathSumIISolution;
+    TreeNode * root = new TreeNode(1);
+    pathSumIISolution.pathSum(root, 1);
     
     return EXIT_SUCCESS;
 }

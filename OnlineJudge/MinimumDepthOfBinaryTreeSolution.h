@@ -31,21 +31,12 @@ public:
     int minDepth(TreeNode *root) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        if (root == NULL) {
+        if (!root)
             return 0;
-        }
-        
-        if (root->left==NULL && root->right==NULL) { // leaf node
+        if (root->left == NULL && root->right == NULL) // leaf node
             return 1;
-        }
-        
-        int left = INT_MAX, right = INT_MAX;
-        if (root->left) {
-            left = minDepth(root->left);
-        }
-        if (root->right) {
-            right = minDepth(root->right);
-        }
+        int left = root->left ? minDepth(root->left) : INT_MAX;
+        int right = root->right ? minDepth(root->right) : INT_MAX;
         return min(left, right) + 1;
     }
 };

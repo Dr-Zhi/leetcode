@@ -63,8 +63,8 @@
 		B25600AE16F4390200E9F093 /* OnlineJudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OnlineJudge; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25600B116F4390200E9F093 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B25600B316F4390200E9F093 /* OnlineJudge.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OnlineJudge.1; sourceTree = "<group>"; };
-		B25C6EC816F4670F00E42916 /* PolulatingNextRightPointersInEachNodeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolulatingNextRightPointersInEachNodeSolution.h; sourceTree = "<group>"; };
-		B25C6EC916F4789E00E42916 /* PolulatingNextRightPointersInEachNodeIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolulatingNextRightPointersInEachNodeIISolution.h; sourceTree = "<group>"; };
+		B25C6EC816F4670F00E42916 /* PopulatingNextRightPointersInEachNodeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopulatingNextRightPointersInEachNodeSolution.h; sourceTree = "<group>"; };
+		B25C6EC916F4789E00E42916 /* PopulatingNextRightPointersInEachNodeIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopulatingNextRightPointersInEachNodeIISolution.h; sourceTree = "<group>"; };
 		B26E24AA16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestTimetoBuyandSellStockSolutionI.h; sourceTree = "<group>"; };
 		B26E24AB16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestTimetoBuyandSellStockSolutionII.h; sourceTree = "<group>"; };
 		B26E24AC16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionIII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestTimetoBuyandSellStockSolutionIII.h; sourceTree = "<group>"; };
@@ -75,10 +75,12 @@
 		B26E24B116F4398D002152D0 /* ValidPalindromeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidPalindromeSolution.h; sourceTree = "<group>"; };
 		B28C8DCA1759BFC700F0C34A /* InsertIntervalSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertIntervalSolution.h; sourceTree = "<group>"; };
 		B28C8DCB175A0CBE00F0C34A /* lengthOfLastWordSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lengthOfLastWordSolution.h; sourceTree = "<group>"; };
+		B290A6E717AB8E34006E25E9 /* SumRootToLeafNumbersSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SumRootToLeafNumbersSolution.h; sourceTree = "<group>"; };
 		B2AB4A7A16FAA055007BF40E /* FlattenBinaryTreeToLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlattenBinaryTreeToLinkedList.h; sourceTree = "<group>"; };
 		B2AC3C801769BFFE00B652CC /* PowerOfXSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerOfXSolution.h; sourceTree = "<group>"; };
 		B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedListsSolution.h; sourceTree = "<group>"; };
 		B2DCE7BB1749D91A0057B6EC /* MergeTwoSortedArraysSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedArraysSolution.h; sourceTree = "<group>"; };
+		B2E2521017D76F7D0050ED19 /* RestoreIPAddressesSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestoreIPAddressesSolution.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +136,12 @@
 				B23380821797EF2B0094D85F /* LowestCommonAncestorOfBinaryTreePartIISolution.h */,
 				B2338083179926EA0094D85F /* LowestCommonAncestorOfBinaryTreePartISolution.h */,
 				B25600B116F4390200E9F093 /* main.cpp */,
+				B2E2521017D76F7D0050ED19 /* RestoreIPAddressesSolution.h */,
 				B216132A170A6B250018FC4F /* MaximumDepthOfBinaryTreeSolution.h */,
 				B2DCE7BB1749D91A0057B6EC /* MergeTwoSortedArraysSolution.h */,
 				B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */,
 				B21612E516FEE1B10018FC4F /* MinimumDepthOfBinaryTreeSolution.h */,
+				B290A6E717AB8E34006E25E9 /* SumRootToLeafNumbersSolution.h */,
 				B25600B316F4390200E9F093 /* OnlineJudge.1 */,
 				B2338086179BDDD20094D85F /* PalindromeNumberSolution.h */,
 				B233807F1797A1F10094D85F /* PartitionListSolution.h */,
@@ -145,8 +149,8 @@
 				B26E24B016F4398D002152D0 /* PascalTriangleSolution.h */,
 				B21612E316FEB4E40018FC4F /* PathSumIISolution.h */,
 				B21612E216FDD0D10018FC4F /* PathSumSolution.h */,
-				B25C6EC916F4789E00E42916 /* PolulatingNextRightPointersInEachNodeIISolution.h */,
-				B25C6EC816F4670F00E42916 /* PolulatingNextRightPointersInEachNodeSolution.h */,
+				B25C6EC916F4789E00E42916 /* PopulatingNextRightPointersInEachNodeIISolution.h */,
+				B25C6EC816F4670F00E42916 /* PopulatingNextRightPointersInEachNodeSolution.h */,
 				B2AC3C801769BFFE00B652CC /* PowerOfXSolution.h */,
 				B233808A179CE69D0094D85F /* RemoveDuplicatesFromSortedListSolution.h */,
 				B2338085179BD3910094D85F /* RemoveDuplicatesFromSortedArraySolution.h */,

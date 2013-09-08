@@ -31,7 +31,7 @@ struct TreeLinkNode {
  
  * Note: 
  * 1. You may only use constant extra space.
- * 2. You may assume that it is a perfect binary tree (ie, all leaves are at 
+ * 2. You may assume that it is a PERFECT binary tree (ie, all leaves are at 
  * the same level, and every parent has two children). For example, Given the
  * following perfect binary tree,
  *     1
@@ -46,23 +46,31 @@ struct TreeLinkNode {
  *  / \   / \
  * 4->5->6-> 7 -> NULL
  */
-class PolulatingNextRightPointersInEachNodeSolution {
+class PopulatingNextRightPointersInEachNodeSolution {
 public:
     void connect(TreeLinkNode *root) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        if (root == NULL || (root->left == NULL && root->right == NULL)) {
-            return;
+
+        // assumption: perfect binary tree
+        TreeLinkNode *start = root;
+        while (start) {
+            TreeLinkNode *cur = start;
+            while (cur && cur->left) {
+                cur->left->next = cur->right;
+                cur->right->next = cur->next ? cur->next->left : NULL;
+                cur = cur->next;
+            }
+            start = start->left;
         }
-        // Assumption: perfect binary tree
-        if (root->left) {
-            root->left->next = root->right;
-        }
-        if (root->right) {
-            root->right->next = root->next ? root->next->left : NULL;
-        }
-        connect(root->right);
-        connect(root->left);
+
+// although simple, the below code costs O(lg(n)) stack space.
+//        if (!root || !root->left)
+//            return;
+//        root->left->next = root->right;
+//        root->right->next = root->next ? root->next->left : NULL;
+//        connect(root->right);
+//        connect(root->left);
     }
 };
 

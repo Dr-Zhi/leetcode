@@ -35,27 +35,19 @@ public:
     bool isBalanced(TreeNode *root) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        int height = -1;
-        return isBalancedRecursive(root, height);
-    }
-    
-private:
-    bool isBalancedRecursive(TreeNode * root, int & height) {
-        if (root == NULL) {
-            height = -1;
+        if (!root)
             return true;
-        }
-        int leftHeight = -1, rightHeight = -1;
-        bool leftBalanced = (root->left == NULL) ||
-                            isBalancedRecursive(root->left, leftHeight);
-        if (leftBalanced == false) { // return early
+        int depth = 0;
+        return isBalancedRecursive(root, depth);
+    }
+    bool isBalancedRecursive(TreeNode *root, int &depth) {
+        int leftDepth = depth + 1, rightDepth = depth + 1;
+        bool left = root->left ? isBalancedRecursive(root->left, leftDepth) : true;
+        if (!left)
             return false;
-        }
-        bool rightBalanced = (root->right == NULL) ||
-                             isBalancedRecursive(root->right, rightHeight);
-        height = max(leftHeight, rightHeight) + 1;
-        return leftBalanced && rightBalanced &&
-               abs(leftHeight-rightHeight) <= 1;
+        bool right = root->right ? isBalancedRecursive(root->right, rightDepth) : true;
+        depth = max(leftDepth, rightDepth);
+        return right && (abs(rightDepth-leftDepth) <= 1);
     }
 };
 
