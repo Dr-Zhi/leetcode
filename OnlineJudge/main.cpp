@@ -45,6 +45,7 @@
 #include "SwapNodesInPairsSolution.h"
 #include "PathSumIISolution.h"
 #include "PopulatingNextRightPointersInEachNodeIISolution.h"
+#include "CombinationsSolution.h"
 
 using std::cout;
 using std::endl;
