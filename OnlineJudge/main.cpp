@@ -46,6 +46,8 @@
 #include "PathSumIISolution.h"
 #include "PopulatingNextRightPointersInEachNodeIISolution.h"
 #include "CombinationsSolution.h"
+#include "TwoSumSolution.h"
+#include "LongestConsecutiveSequenceSolution.h"
 
 using std::cout;
 using std::endl;
