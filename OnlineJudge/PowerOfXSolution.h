@@ -12,7 +12,6 @@
 /** http://leetcode.com/onlinejudge#question_50
  * Implement pow(x, n).
  *
- * !Lesson learnt: 
  * improve %2, /2 as &0x1, >>1.
  */
 class PowerOfXSolution {

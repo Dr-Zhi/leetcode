@@ -48,6 +48,8 @@
 #include "CombinationsSolution.h"
 #include "TwoSumSolution.h"
 #include "LongestConsecutiveSequenceSolution.h"
+#include "SetMatrixZeroesSolution.h"
+#include "SqrtSolution.h"
 
 using std::cout;
 using std::endl;
