@@ -11,9 +11,11 @@
 
 #include <string>
 
+using std::string;
+
 /**
- * http://leetcode.com/onlinejudge#question_125
- * Valid PalindromeJan
+ * http://oj.leetcode.com/problems/valid-palindrome/
+ * Valid Palindrome
  * Given a string, determine if it is a palindrome, considering only
  * alphanumeric characters and ignoring cases. For example, "A man, a plan, 
  * a canal: Panama" is a palindrome. "race a car" is not a palindrome.
@@ -23,20 +25,18 @@
  */
 class ValidPalindromeSolution {
 public:
-    bool isPalindrome(std::string s) {
-        int i = 0, j = (int)s.size()-1;
-        while(i < j) {
-            while(!isalnum(s[i]) && i < j)
-                ++i;
-            while(!isalnum(s[j]) && j > i)
-                --j;
-            if(i >= j)
-                break;
-            if (tolower(s[i]) != tolower(s[j])) {
-                return false;
+    bool isPalindrome(string s) {
+        auto left = s.begin(), right = prev(s.end());
+        while (left < right) {
+            if (!isalnum(*left)) ++left;
+            else if (!isalnum(*right)) --right;
+            else {
+                if (tolower(*left) != tolower(*right))
+                    return false;
+                ++left, --right;
             }
-            ++i, --j;
         }
+        
         return true;
     }
 };

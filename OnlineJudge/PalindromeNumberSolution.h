@@ -9,7 +9,7 @@
 #ifndef OnlineJudge_PalindromeNumberSolution_h
 #define OnlineJudge_PalindromeNumberSolution_h
 
-/** http://leetcode.com/onlinejudge#question_9
+/** http://oj.leetcode.com/problems/palindrome-number/
  * Determine whether an integer is a palindrome. Do this without extra 
  * space.
  * Some hints: could negative integers be palindromes? (ie, -1)
@@ -24,21 +24,20 @@
 class PalindromeNumberSolution {
 public:
     bool isPalindrome(int x) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (x < 0)
             return false;
-        int div = 10;
-        while (x / div >= 10)
-            div *= 10;
-        int last, first;
-        while (x >= 10) {
-            last = x / div;
-            first = x % 10;
-            if (first != last)
+        int divisor = 1;
+        while (x / divisor >= 10) {
+            divisor *= 10;
+        }
+        int high, low;
+        while (x > 0) {
+            high = x / divisor;
+            low = x % 10;
+            if (high != low)
                 return false;
-            x = x % div / 10;
-            div /= 100;
+            x = x % divisor / 10;
+            divisor /= 100;
         }
         return true;
     }

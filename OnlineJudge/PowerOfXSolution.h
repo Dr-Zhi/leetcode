@@ -9,26 +9,26 @@
 #ifndef OnlineJudge_PowerXNSolution_h
 #define OnlineJudge_PowerXNSolution_h
 
-/** http://leetcode.com/onlinejudge#question_50
+/** http://oj.leetcode.com/problems/powx-n/
  * Implement pow(x, n).
  *
- * improve %2, /2 as &0x1, >>1.
+ * Note: %2 == &0x1, /2 == >>1.
  */
 class PowerOfXSolution {
 public:
     double pow(double x, int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
+        bool negative = (n < 0);
+        if (negative)
+            n = -n;
         double result = 1.0;
-        bool isNegative = (n < 0);
-        if (isNegative) n = -n;
         while (n > 0) {
             if (n & 0x1)
                 result *= x;
             x *= x;
             n = n >> 1;
         }
-        if (isNegative)
+        
+        if (negative)
             result = 1.0 / result;
         return result;
     }
