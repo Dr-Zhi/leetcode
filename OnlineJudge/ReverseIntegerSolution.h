@@ -9,7 +9,7 @@
 #ifndef OnlineJudge_ReverseIntegerSolution_h
 #define OnlineJudge_ReverseIntegerSolution_h
 
-/** http://leetcode.com/onlinejudge#question_7
+/** http://oj.leetcode.com/problems/reverse-integer/
  * Reverse digits of an integer. 
  * Example1: x = 123, return 321
  * Example2: x = -123, return -321
@@ -23,17 +23,15 @@
  * How should you handle such cases? Throw an exception? Good, but what if
  * throwing an exception is not an option? You would then have to re-design
  * the function (ie, add an extra parameter).
+ *
+ * The sign of modulo is the same as the dividend.
  */
 class ReverseIntegerSolution {
 public:
     int reverse(int x) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        int result = 0, digit;
-        while (x != 0) {
-            digit = x % 10; // the sign of remainder
-            x = x / 10;
-            result = result * 10 + digit;
+        int result = 0;
+        for (; x != 0; x /= 10) {
+            result = result * 10 + x % 10;
         }
         return result;
     }
