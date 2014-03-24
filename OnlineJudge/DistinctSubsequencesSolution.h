@@ -21,7 +21,7 @@
  * Analysis: dynamic programming with sliding array
  * Let f(i, j) represent # subsequence of T(0...j) in S(0...i). If S[i] == T[j],
  * then f(i, j) = f(i-1, j) + f(i-1, j-1). Otherwise, f(i, j) = f(i-1, j).
- * 
+ *
  */
 class DistinctSubsequencesSolution {
 public:
@@ -31,9 +31,7 @@ public:
         
         for (int i = 0; i < S.size(); ++i) {
             for (int j = T.size() - 1; j >= 0; --j) {
-                if (S[i] == T[j]) {
-                    f[j+1] += f[j];
-                }
+                f[j+1] += (S[i] == T[j] ? f[j] : 0);
             }
         }
         return f[T.size()];

@@ -26,7 +26,7 @@ struct Interval {
     Interval(int s, int e) : start(s), end(e) {}
 };
 
-/** http://leetcode.com/onlinejudge#question_57
+/** http://oj.leetcode.com/problems/insert-interval/
  * Given a set of non-overlapping intervals, insert a new interval into
  * the intervals (merge if necessary). You may assume that the intervals 
  * were initially sorted according to their start times.
@@ -37,50 +37,60 @@ struct Interval {
  * [1,2],[3,10],[12,16].
  * This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
  *
- * References:
- * [1] http://fisherlei.blogspot.com/2012/12/leetcode-insert-interval.html
+ * Algorithms in two steps.
+ * Step 1: calculate the merged interval
+ * Step 2: erase the overlapped intervals, and insert the merged interval
  */
 class InsertIntervalSolution {
 public:
     vector<Interval> insert(vector<Interval> &intervals, Interval newInterval) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        vector<Interval>::iterator iterRemoveStart = intervals.end(), iterRemoveEnd = intervals.end();
-        for (vector<Interval>::iterator iter = intervals.begin();
-             iter != intervals.end(); ++iter) {
-            if (newInterval.end < iter->start) {
-                if (iterRemoveStart == intervals.end()) {
-                    intervals.insert(iter, newInterval);
-                    return intervals;
-                }
-                else {
-                    break;
-                }
+        auto iter = intervals.begin(), first = intervals.end(), last = intervals.end();
+        while (iter != intervals.end()) {
+            if (iter->start > newInterval.end) {
+                break;
             }
-            else if (newInterval.start > iter->end) {
+            else if (iter->end < newInterval.start) {
+                ++iter;
+            }
+            else {
+                newInterval.start = min(iter->start, newInterval.start);
+                newInterval.end = max(iter->end, newInterval.end);
+                if (first == intervals.end()) {
+                    first = iter;
+                }
+                last = ++iter;
+            }
+        }
+        if (first != intervals.end()) {
+            iter = intervals.erase(first, last);
+        }
+        intervals.insert(iter, newInterval);
+        return intervals;
+    }
+    
+    // a simple version but has a complexity of O(n^2) in worst case
+    vector<Interval> insert_(vector<Interval> &intervals, Interval newInterval) {
+        auto iter = intervals.begin();
+        while (iter != intervals.end()) {
+            if (iter->start > newInterval.end) {
+                intervals.insert(iter, newInterval);
+                return intervals;
+            }
+            else if (iter->end < newInterval.start) {
+                ++iter;
                 continue;
             }
-            else { // has intersection
-                newInterval.start = min(newInterval.start, iter->start);
-                newInterval.end = max(newInterval.end, iter->end);
-                if (iterRemoveStart == intervals.end()) {
-                    iterRemoveEnd = iterRemoveStart = iter;
-                }
-                else {
-                    iterRemoveEnd = iter;
-                }
+            else {
+                newInterval.start = min(iter->start, newInterval.start);
+                newInterval.end = max(iter->end, newInterval.end);
+                iter = intervals.erase(iter);
             }
         }
-        if (iterRemoveStart != intervals.end()) {
-            iterRemoveStart->start = newInterval.start;
-            iterRemoveStart->end = newInterval.end;
-            intervals.erase(++iterRemoveStart, ++iterRemoveEnd);
-        }
-        else {
-            intervals.push_back(newInterval);
-        }
+        intervals.insert(iter, newInterval);
         return intervals;
     }
 };
+    
+
 
 #endif
