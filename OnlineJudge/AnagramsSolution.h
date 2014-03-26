@@ -9,25 +9,25 @@
 #ifndef OnlineJudge_AnagramsSolution_h
 #define OnlineJudge_AnagramsSolution_h
 
-/**
+/** http://oj.leetcode.com/problems/anagrams/
  * Given an array of strings, return all groups of strings that are anagrams.
  * Note: All inputs will be in lower-case.
+ * 
+ * Analysis: use a hash map.
  */
 class Solution {
 public:
     vector<string> anagrams(vector<string> &strs) {
-        unordered_map<string, vector<int> > groups;
-        for (int i = 0; i < groups.end(); ++i) {
-            string s = groups[i];
-            sort(s);
-            groups[s].push_back(i);
+        unordered_map<string, vector<string> > groups;
+        for (int i = 0; i < strs.size(); ++i) {
+            string s = strs[i];
+            sort(s.begin(), s.end());
+            groups[s].push_back(strs[i]);
         }
         vector<string> result;
         for (auto iter = groups.cbegin(); iter != groups.cend(); ++iter) {
             if ((iter->second).size() > 1) {
-                for (auto i : iter->second) {
-                    result.push_back(strs[i]);
-                }
+                result.insert(result.end(), iter->second.begin(), iter->second.end());
             }
         }
         

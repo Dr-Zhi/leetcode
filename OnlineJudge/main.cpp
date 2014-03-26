@@ -50,6 +50,7 @@
 #include "LongestConsecutiveSequenceSolution.h"
 #include "SetMatrixZeroesSolution.h"
 #include "SqrtSolution.h"
+#include "NextPermutationSolution.h"
 
 using std::cout;
 using std::endl;
@@ -162,9 +163,17 @@ int main(int argc, const char * argv[])
 //    ReverseIntegerSolution reverseInteger;
 //    cout << reverseInteger.reverse(-123) << endl;
     
-    PathSumIISolution pathSumIISolution;
-    TreeNode * root = new TreeNode(1);
-    pathSumIISolution.pathSum(root, 1);
+//    PathSumIISolution pathSumIISolution;
+//    TreeNode * root = new TreeNode(1);
+//    pathSumIISolution.pathSum(root, 1);
+    
+    
+    NextPermutationSolution nextPermutationSolution;
+    vector<int> array = {1, 3, 2};
+    nextPermutationSolution.nextPermutation(array);
+    for (auto x : array) {
+        cout << x << endl;
+    }    
     
     return EXIT_SUCCESS;
 }
