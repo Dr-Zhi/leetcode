@@ -18,32 +18,30 @@
  * };
  */
 
-/** http://leetcode.com/onlinejudge#question_83
+/** http://oj.leetcode.com/problems/remove-duplicates-from-sorted-list/
  * Given a sorted linked list, delete all duplicates such that each element
  * appear only once. 
  * For example, given 1->1->2, return 1->2; given 1->1->2->3->3, 
  * return 1->2->3.
+ *
+ * Analysis: focus on the current pointer. Remove the next pointer if necessary.
  */
 class RemoveDuplicatesFromSortedListSolution {
 public:
-    ListNode *deleteDuplicates(ListNode *head) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (!head)
-            return NULL;
-        ListNode *prev = head, *cur = head->next;
-        int value = head->val;
-        while (cur) {
-            if(cur->val == value)
-                prev->next = cur->next;
-            else {
-                value = cur->val;
-                prev = cur;
-            }
-            cur = prev->next;
-        }
-        return head;
+  ListNode *deleteDuplicates(ListNode *head) {
+    ListNode * cur = head, * tmp;
+    while (cur) {
+      if (cur->next && cur->next->val == cur->val) {
+        tmp = cur->next;
+        cur->next = tmp->next;
+        delete tmp;
+      }
+      else {
+        cur = cur->next;
+      }
     }
+    return head;
+  }
 };
 
 #endif

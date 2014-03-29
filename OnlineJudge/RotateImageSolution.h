@@ -16,7 +16,7 @@
  *
  * Analysis: simulating the rotation is a simple solution, but it requires O(n)
  * extras space. We need to find another way:
- * Step 1: flip the matrix by the diagonal line
+ * Step 1: flip the matrix by the minor diagonal line
  * Step 2: flip the matrix by the horizontal middle line.
  */
 class RotateImageSolution {
