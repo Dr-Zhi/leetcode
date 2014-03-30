@@ -32,25 +32,18 @@
 class SwapNodesInPairsSolution {
 public:
     ListNode *swapPairs(ListNode *head) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if(!head)
-            return head;
-        ListNode *cur = head, *next = cur->next, *prev = NULL;
-        if (next)
-            head = next;
-        while (cur && next) {
+        if(head == nullptr || head->next == nullptr)
+            return nullptr;
+        
+        ListNode dummy(0);
+        dummy.next = head;
+        for (ListNode * prev = &dummy, * cur = head, * next = head->next; next;
+             prev = cur, cur = cur->next, next = cur ? cur->next : nullptr) {
+            prev->next = next;
             cur->next = next->next;
             next->next = cur;
-            if (prev)
-                prev->next = next;
-            prev = cur;
-            cur = cur->next;
-            if (cur)
-                next = cur->next;
         }
-        return head;
+        return dummy.next;
     }
 };
-
 #endif

@@ -17,23 +17,21 @@
  */
 class Solution {
 public:
-    /** this alg. keeps the original order but may have O(n) element 
-     copies.*/
+    /** keeps the original order but may have O(n) copies.*/
     int removeElement(int A[], int n, int elem) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        int last = -1;
-        for(int i = 0; i < n; ++i) {
-            if (A[i] != elem){
-                ++last;
-                A[last] = A[i];
+        int len = 0;
+        for (int i = 0; i < n; ++i) {
+            if (A[i] != elem) {
+                A[len] = A[i];
+                ++len;
             }
         }
-        return last+1;
+        return len;
     }
-    
-    /** an improved version, which saves #copy of elements but does not keep
-     the original order. */
+  
+    /** An improved version, which does NOT keep the original order but has
+     * better performance
+     */
     int removeElementV2(int A[], int n, int elem) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
