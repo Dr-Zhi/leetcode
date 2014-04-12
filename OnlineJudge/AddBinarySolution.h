@@ -14,32 +14,30 @@
 using std::max;
 using std::reverse;
 
-/** http://leetcode.com/onlinejudge#question_67
+/** http://oj.leetcode.com/problems/add-binary/
  * Given two binary strings, return their sum (also a binary string).
  * For example, a = "11", b = "1", return "100".
+ * 
+ * Analysis: note the order of the characters in a string as a number. "100" 
+ * indicates that the first character is the most significant bit (MSB), i.e.,
+ * in a reverse order. 
  */
 class AddBinarySolution {
 public:
     string addBinary(string a, string b) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (a.empty() || b.empty())
-            return (a.empty() ? b : a);
-        string sum;
-        sum.reserve(max(a.size(), b.size()));
-        int s, carry = 0;
-        for (int i = (int)a.size() - 1, j = (int)b.size() - 1;
-             i >= 0 || j >= 0; --i, --j) {
-            int va = (i < 0 ? 0 : (a[i]-'0'));
-            int vb = (j < 0 ? 0 : (b[j]-'0'));
-            s = carry + va + vb;
-            carry = (s > 1 ? 1 : 0);
-            sum.push_back((int)(s & 0x1) + '0');
+        string result;
+        result.reserve(max(a.size(), b.size()) + 1);
+        int carry = 0;
+        for (int i = (int)a.size() - 1, j = (int)b.size() - 1; i >= 0 || j >= 0
+             || carry > 0; --i, --j) {
+            int va = (i >= 0 ? (a[i] - '0') : 0);
+            int vb = (j >= 0 ? (b[j] - '0') : 0);
+            int sum = va + vb + carry;
+            result.push_back('0' + (sum & 0x1));
+            carry = (sum >> 1);
         }
-        if (carry > 0)
-            sum.push_back('1');
-        reverse(sum.begin(), sum.end());
-        return sum;
+        reverse(result.begin(), result.end());
+        return result;
     }
 };
 
