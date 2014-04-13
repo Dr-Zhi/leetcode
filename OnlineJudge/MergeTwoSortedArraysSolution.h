@@ -9,7 +9,7 @@
 #ifndef OnlineJudge_MergeTwoSortedArraysSolution_h
 #define OnlineJudge_MergeTwoSortedArraysSolution_h
 
-/** http://leetcode.com/onlinejudge#question_88
+/** http://oj.leetcode.com/problems/merge-sorted-array/
  * Given two sorted integer arrays A and B, merge B into A as one sorted
  * array.
  
@@ -20,17 +20,16 @@
 class MergeTwoSortedArraysSolution {
 public:
     void merge(int A[], int m, int B[], int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         while (n > 0) {
             if (m > 0 && A[m-1] > B[n-1]) {
-                A[n+m-1] = A[--m];
+                A[m+n-1] = A[m-1];
+                --m;
             }
             else {
-                A[n+m-1] = B[--n];
+                A[m+n-1] = B[n-1];
+                --n;
             }
         }
-        
     }
 };
 
