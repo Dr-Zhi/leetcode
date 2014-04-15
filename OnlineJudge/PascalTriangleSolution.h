@@ -12,9 +12,8 @@
 #include <vector>
 
 using std::vector;
-using std::swap;
 
-/** http://leetcode.com/onlinejudge#question_118
+/** http://oj.leetcode.com/problems/pascals-triangle/
  * Given numRows, generate the first numRows of Pascal's triangle.
  For example, given numRows = 5, return
  [
@@ -24,25 +23,21 @@ using std::swap;
   [1,3,3,1],
  [1,4,6,4,1]
  ]
+ *
+ * Analysis: using sliding array.
  */
 class PascalTriangleSolution {
 public:
     vector<vector<int> > generate(int numRows) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<vector<int> > triangle;
-        if (numRows <= 0)
-            return triangle;
-        vector<int> row(1, 1);
-        row.reserve(numRows);
-        triangle.push_back(row);
-        for (int i = 1; i < numRows; ++i) {
-            row.resize(i+1);
-            row[i] = row[i-1];
-            for (int j = i-1; j >= 1; --j) {
-                row[j] += row[j-1];
+        vector<int> line;
+        line.reserve(numRows);
+        for (int i = 0; i < numRows; ++i) {
+            for (int j = i-1; j > 0; --j) {
+                line[j] = line[j] + line[j-1];
             }
-            triangle.push_back(row);
+            line.push_back(1);
+            triangle.push_back(line);
         }
         return triangle;
     }

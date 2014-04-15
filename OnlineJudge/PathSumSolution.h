@@ -19,7 +19,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-/** http://leetcode.com/onlinejudge#question_112
+/** http://oj.leetcode.com/problems/path-sum/
  * Given a binary tree and a sum, determine if the tree has a root-to-leaf 
  * path such that adding up all the values along the path equals the given
  * sum. For example: given the below binary tree and sum = 22,
@@ -32,26 +32,20 @@ struct TreeNode {
    7    2      1
  * return true, as there exist a root-to-leaf path 5->4->11->2 which sum is
  * 22.
+ * 
+ * Corner case: empty tree and sum == 0 ==> return false
  */
 class PathSumSolution {
 public:
     bool hasPathSum(TreeNode *root, int sum) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (root == NULL) {
+        if (root == nullptr) {
             return false;
         }
-        
-        sum -= root->val; // remaining sum
-        if (root->left==NULL && root->right==NULL && // leaf node
-            sum==0) {
-            return true;
+        sum -= root->val;
+        if (root->left == nullptr && root->right == nullptr) {
+            return sum == 0;
         }
-        
-        bool left = hasPathSum(root->left, sum);
-        bool right = hasPathSum(root->right, sum);
-        
-        return left || right;
+        return hasPathSum(root->left, sum)) || hasPathSum(root->right, sum));
     }
 };
 

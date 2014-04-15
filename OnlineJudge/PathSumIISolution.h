@@ -23,7 +23,7 @@ struct TreeNode {
 };
  */
 
-/** http://leetcode.com/onlinejudge#question_113
+/** http://oj.leetcode.com/problems/path-sum-ii/
  * Given a binary tree and a sum, find all root-to-leaf paths where each
  * path's sum equals the given sum. For example: given the below binary 
  * tree and sum = 22,
@@ -43,32 +43,27 @@ struct TreeNode {
 class PathSumIISolution {
 public:
     vector<vector<int> > pathSum(TreeNode *root, int sum) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        vector<vector<int> > paths;
-        vector<int> curPath;
-        pathSumRecursive(root, sum, paths, curPath);
-        return paths;
+        vector<vector<int> > allPaths;
+        vector<int> path;
+        pathSumInternal(root, sum, path, allPaths);
+        return allPaths;
     }
     
 private:
-    void pathSumRecursive(TreeNode * root, int sum,
-                          vector<vector<int> > & paths,
-                          vector<int> & curPath) {
-        if (root == NULL) {
+    void pathSumInternal(TreeNode * root, int sum, vector<int> & path, vector<vector<int> > & allPaths) {
+        if (root == nullptr) {
             return;
         }
         
-        curPath.push_back(root->val);
+        path.push_back(root->val);
         sum -= root->val;
-        if (root->left==NULL && root->right==NULL &&
-            sum == 0) { // found a path
-            paths.push_back(curPath);
+        if (root->left == nullptr && root->right == nullptr && sum == 0) {
+            allPaths.push_back(path);
         }
         
-        pathSumRecursive(root->left, sum, paths, curPath);
-        pathSumRecursive(root->right, sum, paths, curPath);
-        curPath.pop_back();
+        pathSumInternal(root->left, sum, path, allPaths);
+        pathSumInternal(root->right, sum, path, allPaths);
+        path.pop_back();
     }
 };
 

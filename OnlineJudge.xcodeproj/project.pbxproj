@@ -25,6 +25,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F0F44EA18EA97EF003736C4 /* ContainerWithMostWaterSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerWithMostWaterSolution.h; sourceTree = "<group>"; };
+		4F11682218D2BA8000ED7758 /* UniquePathsSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniquePathsSolution.h; sourceTree = "<group>"; };
+		4F1A075C18E811E600E98E37 /* RemoveNthNodeFromEndOfListSolution .h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RemoveNthNodeFromEndOfListSolution .h"; sourceTree = "<group>"; };
+		4F33F4FE18C17DC6009D6D4C /* ClimbingStairsSolution .h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ClimbingStairsSolution .h"; sourceTree = "<group>"; };
+		4F33F4FF18C19A37009D6D4C /* PlusOneSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusOneSolution.h; sourceTree = "<group>"; };
+		4F7045DF18FA323F008EEBCD /* FirstMissingPositiveSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstMissingPositiveSolution.h; sourceTree = "<group>"; };
+		4F7B32A118E1624300E8FC37 /* NextPermutationSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextPermutationSolution.h; sourceTree = "<group>"; };
+		4F7E9EC018C20DAE00B66878 /* SetMatrixZeroesSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMatrixZeroesSolution.h; sourceTree = "<group>"; };
+		4F7E9EC118C2189400B66878 /* SingleNumberSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleNumberSolution.h; sourceTree = "<group>"; };
+		4F7E9EC218C21D2200B66878 /* GasStationSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasStationSolution.h; sourceTree = "<group>"; };
+		4F7E9EC318C2F4C700B66878 /* CandySolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandySolution.h; sourceTree = "<group>"; };
+		4F7E9EC418C36A0B00B66878 /* SqrtSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqrtSolution.h; sourceTree = "<group>"; };
+		4F7E9EC518C8BC2D00B66878 /* AnagramsSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnagramsSolution.h; sourceTree = "<group>"; };
+		4F86FEB218DDCAD000B16D85 /* JumpGameSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpGameSolution.h; sourceTree = "<group>"; };
+		4F86FEB318DEDB8B00B16D85 /* DecodeWaysSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodeWaysSolution.h; sourceTree = "<group>"; };
+		4F86FEB418DF1B9000B16D85 /* DistinctSubsequencesSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistinctSubsequencesSolution.h; sourceTree = "<group>"; };
+		4F8D9F2218E65C1D00136C5F /* TrappingRainWaterSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrappingRainWaterSolution.h; sourceTree = "<group>"; };
+		4F8D9F2318E665AE00136C5F /* RotateImageSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateImageSolution.h; sourceTree = "<group>"; };
+		4F8D9F2418E66B7700136C5F /* GrayCodeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayCodeSolution.h; sourceTree = "<group>"; };
+		4F8D9F2518E7045C00136C5F /* RemoveDuplicatesFromSortedListIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveDuplicatesFromSortedListIISolution.h; sourceTree = "<group>"; };
+		4F8D9F2618E79E0900136C5F /* RotateListSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateListSolution.h; sourceTree = "<group>"; };
+		4FABDECE18F8F45600DF014A /* InsertionSortListSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertionSortListSolution.h; sourceTree = "<group>"; };
+		4FABDECF18F8FAB000DF014A /* WordBreakSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordBreakSolution.h; sourceTree = "<group>"; };
+		4FABDED018F9813A00DF014A /* ValidParenthesesSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidParenthesesSolution.h; sourceTree = "<group>"; };
+		4FABDED118F9814900DF014A /* LinkedListCycleSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedListCycleSolution.h; sourceTree = "<group>"; };
+		4FDACFB018D195F9005C752C /* MaximumSubarraySolution .h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MaximumSubarraySolution .h"; sourceTree = "<group>"; };
+		4FDFC97718B078EB00474F6A /* TwoSumSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoSumSolution.h; sourceTree = "<group>"; };
+		4FDFC97918B245A100474F6A /* SearchInSortedArraySolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchInSortedArraySolution.h; sourceTree = "<group>"; };
+		4FDFC97A18B2F25400474F6A /* LongestConsecutiveSequenceSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongestConsecutiveSequenceSolution.h; sourceTree = "<group>"; };
 		B21612E216FDD0D10018FC4F /* PathSumSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathSumSolution.h; sourceTree = "<group>"; };
 		B21612E316FEB4E40018FC4F /* PathSumIISolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathSumIISolution.h; sourceTree = "<group>"; };
 		B21612E516FEE1B10018FC4F /* MinimumDepthOfBinaryTreeSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinimumDepthOfBinaryTreeSolution.h; sourceTree = "<group>"; };
@@ -115,14 +144,21 @@
 		B25600B016F4390200E9F093 /* OnlineJudge */ = {
 			isa = PBXGroup;
 			children = (
+				4FABDED018F9813A00DF014A /* ValidParenthesesSolution.h */,
+				4FABDED118F9814900DF014A /* LinkedListCycleSolution.h */,
 				B233807E179399C30094D85F /* AddBinarySolution.h */,
 				B23380811797E5910094D85F /* AddTwoNumbersSolution.h */,
 				B21612E71700457B0018FC4F /* BalancedBinaryTreeSolution.h */,
+				4FDFC97918B245A100474F6A /* SearchInSortedArraySolution.h */,
+				4FDFC97A18B2F25400474F6A /* LongestConsecutiveSequenceSolution.h */,
 				B26E24AA16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionI.h */,
 				B26E24AB16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionII.h */,
 				B26E24AC16F4398D002152D0 /* BestTimetoBuyandSellStockSolutionIII.h */,
+				4F8D9F2418E66B7700136C5F /* GrayCodeSolution.h */,
 				B21613271703C7680018FC4F /* BinaryTreeLevelOrderTraversalIISolution.h */,
 				B21612EA170321EA0018FC4F /* BinaryTreeLevelOrderTraversalSolution.h */,
+				4FABDECE18F8F45600DF014A /* InsertionSortListSolution.h */,
+				4FABDECF18F8FAB000DF014A /* WordBreakSolution.h */,
 				B21612EB170329A60018FC4F /* BinaryTreeLevelOrderTraversalSolutionII.h */,
 				B26E24AD16F4398D002152D0 /* BinaryTreeMaximumPathSumSolution.h */,
 				B21612EC17032EC00018FC4F /* BinaryTreePrintLevelOrder.h */,
@@ -134,13 +170,18 @@
 				B21612E9170181120018FC4F /* ConvertSortedListToBinarySearchTreeSolution.h */,
 				B2AB4A7A16FAA055007BF40E /* FlattenBinaryTreeToLinkedList.h */,
 				B28C8DCA1759BFC700F0C34A /* InsertIntervalSolution.h */,
+				4F1A075C18E811E600E98E37 /* RemoveNthNodeFromEndOfListSolution .h */,
 				B2161332170C05FD0018FC4F /* InterleavingStringSolution.h */,
 				B28C8DCB175A0CBE00F0C34A /* lengthOfLastWordSolution.h */,
 				B2E2521117DF4D150050ED19 /* LetterCombinationsOfAPhoneNumber.h */,
 				B23380821797EF2B0094D85F /* LowestCommonAncestorOfBinaryTreePartIISolution.h */,
 				B2338083179926EA0094D85F /* LowestCommonAncestorOfBinaryTreePartISolution.h */,
 				B25600B116F4390200E9F093 /* main.cpp */,
+				4F7E9EC118C2189400B66878 /* SingleNumberSolution.h */,
+				4F7E9EC218C21D2200B66878 /* GasStationSolution.h */,
+				4F7E9EC318C2F4C700B66878 /* CandySolution.h */,
 				B216132A170A6B250018FC4F /* MaximumDepthOfBinaryTreeSolution.h */,
+				4FDACFB018D195F9005C752C /* MaximumSubarraySolution .h */,
 				B2DCE7BB1749D91A0057B6EC /* MergeTwoSortedArraysSolution.h */,
 				B2DCE7B51745103A0057B6EC /* MergeTwoSortedListsSolution.h */,
 				B21612E516FEE1B10018FC4F /* MinimumDepthOfBinaryTreeSolution.h */,
@@ -159,19 +200,36 @@
 				B2338087179BE6530094D85F /* RemoveElementSolution.h */,
 				B2E2521017D76F7D0050ED19 /* RestoreIPAddressesSolution.h */,
 				B23380801797E2560094D85F /* ReverseIntegerSolution.h */,
+				4F86FEB318DEDB8B00B16D85 /* DecodeWaysSolution.h */,
 				B216132F170AC18A0018FC4F /* SameTreeSolutionIterative.h */,
 				B2161330170ACD0E0018FC4F /* SameTreeSolutionRecursive.h */,
 				B2338089179CE1010094D85F /* SearchInsertPositionSolution.h */,
 				B233807D1792BBCA0094D85F /* SubsetsSolutionIterative.h */,
+				4F7E9EC418C36A0B00B66878 /* SqrtSolution.h */,
 				B233807C1792BA800094D85F /* SubsetsSolutionRecursive.h */,
 				B290A6E717AB8E34006E25E9 /* SumRootToLeafNumbersSolution.h */,
 				B2338088179C157C0094D85F /* SwapNodesInPairsSolution.h */,
 				B216132E170ABB3C0018FC4F /* SymmetricTreeSolutionIterative.h */,
 				B216132C170A8B280018FC4F /* SymmetricTreeSolutionRecursive.h */,
 				B26E24AE16F4398D002152D0 /* TriangleSolution.h */,
+				4F11682218D2BA8000ED7758 /* UniquePathsSolution.h */,
+				4F86FEB218DDCAD000B16D85 /* JumpGameSolution.h */,
+				4FDFC97718B078EB00474F6A /* TwoSumSolution.h */,
 				B2338084179927680094D85F /* Types.h */,
 				B2161331170C007D0018FC4F /* ValidateBinarySearchTreeSolution.h */,
 				B26E24B116F4398D002152D0 /* ValidPalindromeSolution.h */,
+				4F33F4FE18C17DC6009D6D4C /* ClimbingStairsSolution .h */,
+				4F33F4FF18C19A37009D6D4C /* PlusOneSolution.h */,
+				4F7E9EC018C20DAE00B66878 /* SetMatrixZeroesSolution.h */,
+				4F7E9EC518C8BC2D00B66878 /* AnagramsSolution.h */,
+				4F86FEB418DF1B9000B16D85 /* DistinctSubsequencesSolution.h */,
+				4F7B32A118E1624300E8FC37 /* NextPermutationSolution.h */,
+				4F8D9F2218E65C1D00136C5F /* TrappingRainWaterSolution.h */,
+				4F8D9F2318E665AE00136C5F /* RotateImageSolution.h */,
+				4F8D9F2518E7045C00136C5F /* RemoveDuplicatesFromSortedListIISolution.h */,
+				4F8D9F2618E79E0900136C5F /* RotateListSolution.h */,
+				4F0F44EA18EA97EF003736C4 /* ContainerWithMostWaterSolution.h */,
+				4F7045DF18FA323F008EEBCD /* FirstMissingPositiveSolution.h */,
 			);
 			path = OnlineJudge;
 			sourceTree = "<group>";
@@ -202,7 +260,7 @@
 		B25600A616F4390200E9F093 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Dr. Zhi Inc.";
 			};
 			buildConfigurationList = B25600A916F4390200E9F093 /* Build configuration list for PBXProject "OnlineJudge" */;
@@ -238,7 +296,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -270,7 +327,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
