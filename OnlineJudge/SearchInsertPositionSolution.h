@@ -22,19 +22,22 @@
  * [1,3,5,6], 7 → 4
  * [1,3,5,6], 0 → 0
  *
- * !Lesson learnt: simulate the execution before programming. 
+ * Analysis: equivalent to std::lower_bound().
  */
 class Solution {
 public:
     int searchInsert(int A[], int n, int target) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        assert(n >= 0);
-        for (int i = 0; i < n; ++i) {
-            if (A[i] >= target)
-                return i;
+        int first = 0, last = n;
+        while(first < last) {
+            int mid = first + (last - first) / 2;
+            if (A[mid] >= target) {
+                last = mid;
+            }
+            else {
+                first = mid + 1;
+            }
         }
-        return n;
+        return first;
     }
 };
 
