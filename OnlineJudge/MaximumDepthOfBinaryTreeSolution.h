@@ -28,7 +28,7 @@ struct TreeNode {
 };
 */
 
-/** http://leetcode.com/onlinejudge#question_104
+/** http://oj.leetcode.com/problems/maximum-depth-of-binary-tree/
  * Given a binary tree, find its maximum depth. The maximum depth is the 
  * number of nodes along the longest path from the root node down to the
  * farthest leaf node.
@@ -36,14 +36,10 @@ struct TreeNode {
 class MaximumDepthOfBinaryTreeSolution {
 public:
     int maxDepth(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (root == NULL) {
             return 0;
         }
-        int leftDepth = maxDepth(root->left);
-        int rightDepth = maxDepth(root->right);
-        return max(leftDepth, rightDepth) + 1;
+        return max(maxDepth(root->left), maxDepth(root->right)) + 1;
     }
 };
 
