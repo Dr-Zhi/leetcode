@@ -24,32 +24,22 @@ struct TreeNode {
 };
  */
 
-/** http://leetcode.com/onlinejudge#question_100
+/** http://oj.leetcode.com/problems/same-tree/
  * Given two binary trees, write a function to check if they are equal or
  * not. Two binary trees are considered equal if they are structurally
  * identical and the nodes have the same value.
+ * 
  * This is a recursive version.
  */
 class SameTreeSolutionRecursive {
 public:
     bool isSameTree(TreeNode *p, TreeNode *q) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        return isSameTreeRecursive(p, q);
-    }
-    
-private:
-    bool isSameTreeRecursive(TreeNode * p, TreeNode * q) {
-        if (p == NULL || q == NULL) {
-            return p == q; // if the same, both must be NULL
+        if (!p || !q) {
+            return !p && !q;
         }
-        if (p->val != q->val) {
-            return false;
-        }
-        return (isSameTree(p->left, q->left) &&
-                isSameTree(p->right, q->right));
+        return p->val == q->val && isSameTree(p->left, q->left) &&
+            isSameTree(p->right, q->right);
     }
 };
-
 
 #endif
