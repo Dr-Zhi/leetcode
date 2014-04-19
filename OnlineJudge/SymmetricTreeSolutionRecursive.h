@@ -24,7 +24,7 @@ struct TreeNode {
 };
  */
 
-/** http://leetcode.com/onlinejudge#question_101
+/** http://oj.leetcode.com/problems/symmetric-tree/
  * Given a binary tree, check whether it is a mirror of itself (ie, 
  * symmetric around its center). For example, this binary tree is
  * symmetric:
@@ -46,25 +46,17 @@ struct TreeNode {
 class SymmetricTreeSolutionRecursive {
 public:
     bool isSymmetric(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (root == NULL) {
-            return true;
-        }
-        return isSymmetricRecursive(root->left, root->right);
+        return root ? isSymmetricInternal(root->left, root->right) : true;
     }
     
 private:
-    bool isSymmetricRecursive(TreeNode * rootLeft, TreeNode * rootRight) {
-        if (rootLeft == NULL || rootRight == NULL) {
-            return rootLeft == rootRight; // symmetric if both == NULL
+    bool isSymmetricInternal(TreeNode * left, TreeNode * right) {
+        if (!left || !right) {
+            return !left && !right;
         }
-        
-        if (rootLeft->val != rootRight->val) {
-            return false;
-        }
-        return (isSymmetricRecursive(rootLeft->left, rootRight->right) &&
-                isSymmetricRecursive(rootLeft->right, rootRight->left));
+        return left->val == right->val &&
+        isSymmetricInternal(left->left, right->right) &&
+        isSymmetricInternal(left->right, right->left);
     }
 };
 

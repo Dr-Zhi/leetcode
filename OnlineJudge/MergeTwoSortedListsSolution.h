@@ -18,34 +18,29 @@
  * };
  */
 
-/** http://leetcode.com/onlinejudge#question_21
+/** http://oj.leetcode.com/problems/merge-two-sorted-lists/
  * Merge two sorted linked lists and return it as a new list. The new list
  * should be made by splicing together the nodes of the first two lists.
  */
 class MergeTwoSortedListsSolution {
 public:
     ListNode *mergeTwoLists(ListNode * l1, ListNode * l2) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        ListNode * pNewHead = getSmallerNode(l1, l2);
-        ListNode * pCurrent = pNewHead;
-        while (l1 || l2) {
-            (pCurrent == l1) ? (l1 = l1->next) : (l2 = l2->next);
-            pCurrent->next = getSmallerNode(l1, l2);
-            pCurrent = pCurrent->next;
+        ListNode dummy(0);
+        ListNode * cur = &dummy;
+        while (l1 && l2) {
+            if (l1->val < l2->val) {
+                cur->next = l1;
+                l1 = l1->next;
+            }
+            else {
+                cur->next = l2;
+                l2 = l2->next;
+            }
+            cur = cur->next;
         }
-        return pNewHead;
-    }
-    
-private:
-    inline ListNode * getSmallerNode(ListNode * l1, ListNode * l2) {
-        if (l1 && l2) {
-            return l1->val < l2->val ? l1 : l2;
-        }
-        return l1 ? l1 : l2;
+        cur->next = (l1 ? l1 : l2);
+        return dummy.next;
     }
 };
-
-
 
 #endif
