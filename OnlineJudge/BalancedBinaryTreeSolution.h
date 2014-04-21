@@ -24,7 +24,7 @@ using std::max;
  * };
  */
 
-/** http://leetcode.com/onlinejudge#question_110
+/** http://oj.leetcode.com/problems/balanced-binary-tree/
  * Given a binary tree, determine if it is height-balanced. 
  * For this problem, a height-balanced binary tree is defined as a binary 
  * tree in which the height of the two subtrees of every node never differ 
@@ -33,22 +33,17 @@ using std::max;
 class BalancedBinaryTreeSolution {
 public:
     bool isBalanced(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (!root)
-            return true;
-        int depth = 0;
-        return isBalancedRecursive(root, depth);
+        return balancedHeight(root) >= 0;
     }
-    bool isBalancedRecursive(TreeNode *root, int &depth) {
-        int leftDepth = depth + 1, rightDepth = depth + 1;
-        bool left = root->left ? isBalancedRecursive(root->left, leftDepth) : true;
-        if (!left)
-            return false;
-        bool right = root->right ? isBalancedRecursive(root->right, rightDepth) : true;
-        depth = max(leftDepth, rightDepth);
-        return right && (abs(rightDepth-leftDepth) <= 1);
+    
+private:
+    int balancedHeight(TreeNode * root) {
+        if (!root) {
+            return 0;
+        }
+        int left = balancedHeight(root->left);
+        int right = balancedHeight(root->right);
+        return (left < 0 || right < 0 || abs(left-right) > 1) ? -1 : (max(left, right) + 1);
     }
 };
-
 #endif
