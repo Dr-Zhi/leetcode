@@ -19,7 +19,7 @@
  };
  */
 
-/** http://leetcode.com/onlinejudge#question_116
+/** http://oj.leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
  * Given a binary tree
  * struct TreeLinkNode {
  *   TreeLinkNode *left;
@@ -49,60 +49,26 @@
 class PopulatingNextRightPointersInEachNodeIISolution {
 public:    
     void connect(TreeLinkNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        TreeLinkNode *start = root;
-        while (start) {
-            TreeLinkNode *node = start, *prev = NULL;
-            start = NULL;
-            while (node) {
-                prev = connectChild(node->left, prev);
-                prev = connectChild(node->right, prev);
-                if (!start) // update next start
-                    start = node->left ? node->left : node->right;
-                node = node->next;
+        TreeLinkNode dummy(0);
+        TreeLinkNode * cur = root;
+        while (cur) {
+            dummy.next = NULL;
+            TreeLinkNode * prev = &dummy;
+            while (cur) {
+                if (cur->left) {
+                    prev->next = cur->left;
+                    prev = prev->next;
+                }
+                if (cur->right) {
+                    prev->next = cur->right;
+                    prev = prev->next;
+                }
+                cur = cur->next;
             }
+            cur = dummy.next;
         }
     }
-    /** connect current node with previous node */
-    TreeLinkNode * connectChild(TreeLinkNode *cur, TreeLinkNode *prev) {
-        if (!cur)
-            return prev;
-        if (prev)
-            prev->next = cur;
-        return cur;
-    }
 };
-
-//        if (root == NULL || (root->left == NULL && root->right == NULL)) {
-//            return;
-//        }
-//        TreeLinkNode * lpRightNextSibling = findRightNextSibling(root->next);
-//        if (root->right) {
-//           root->right->next = lpRightNextSibling;
-//        }
-//        if (root->left) {
-//            root->left->next = root->right ? root->right : lpRightNextSibling;
-//        }
-//        
-//        connect(root->right);
-//        connect(root->left);
-//    }
-//
-//    /// find the right next sibling
-//    inline TreeLinkNode * findRightNextSibling(TreeLinkNode * node) {
-//        while (node) {
-//            if (node->left) {
-//                return node->left;
-//            }
-//            if (node->right) {
-//                return node->right;
-//            }
-//            node = node->next;
-//        }
-//        return NULL;
-//    }
-//};
 
 
 #endif

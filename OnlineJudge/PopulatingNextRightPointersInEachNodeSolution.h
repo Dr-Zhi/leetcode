@@ -18,7 +18,7 @@ struct TreeLinkNode {
     TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}
 };
 
-/** http://leetcode.com/onlinejudge#question_116
+/** http://oj.leetcode.com/problems/populating-next-right-pointers-in-each-node/
  * Given a binary tree
  * struct TreeLinkNode {
  *   TreeLinkNode *left;
@@ -49,9 +49,6 @@ struct TreeLinkNode {
 class PopulatingNextRightPointersInEachNodeSolution {
 public:
     void connect(TreeLinkNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-
         // assumption: perfect binary tree
         TreeLinkNode *start = root;
         while (start) {
@@ -63,14 +60,28 @@ public:
             }
             start = start->left;
         }
-
-// although simple, the below code costs O(lg(n)) stack space.
-//        if (!root || !root->left)
-//            return;
-//        root->left->next = root->right;
-//        root->right->next = root->next ? root->next->left : NULL;
-//        connect(root->right);
-//        connect(root->left);
+    }
+    
+    // remove the perfect binary tree assumption.
+    void connect_generic(TreeLinkNode *root) {
+        TreeLinkNode dummy(0);
+        TreeLinkNode * cur = root;
+        while (cur) {
+            dummy.next = NULL;
+            TreeLinkNode * prev = &dummy;
+            while (cur) {
+                if (cur->left) {
+                    prev->next = cur->left;
+                    prev = prev->next;
+                }
+                if (cur->right) {
+                    prev->next = cur->right;
+                    prev = prev->next;
+                }
+                cur = cur->next;
+            }
+            cur = dummy.next;
+        }
     }
 };
 
