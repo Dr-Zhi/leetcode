@@ -22,20 +22,17 @@
 class RemoveDuplicatesFromSortedArraySolution {
 public:
     int removeDuplicates(int A[], int n) {
+        /* return distance(A, unique(A, A+n)); */
         if (n < 2)
             return n;
         
-        int i = 0, last = 0;
-        while (++i != n) {
-            if (A[i] != A[last])
+        int last = 0;
+        for (int i = 1; i < n; ++i) {
+            if (A[i] != A[last]) {
                 A[++last] = A[i];
+            }
         }
-        return last + 1;
-    }
-    
-    // a much more simple version
-    int removeDuplicatesV2(int A[], int n) {
-        return distance(A, unique(A, A+n));
+        return ++last;
     }
 };
 
