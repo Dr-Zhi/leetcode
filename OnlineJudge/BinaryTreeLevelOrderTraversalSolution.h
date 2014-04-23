@@ -29,7 +29,7 @@ struct TreeNode {
 };
  */
 
-/** http://leetcode.com/onlinejudge#question_102
+/** http://oj.leetcode.com/problems/binary-tree-level-order-traversal/
  * Given a binary tree, return the level order traversal of its nodes' 
  * values. (ie, from left to right, level by level). For example: given a
  * binary tree {3,9,20,#,#,15,7},
@@ -48,33 +48,28 @@ struct TreeNode {
 class BinaryTreeLevelOrderTraversalSolution {
 public:
     vector<vector<int> > levelOrder(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        vector<TreeNode *> curLevelNodes, nextLevelNodes;
-        vector<vector<int> > rows;
-        vector<int> curRow;
+        vector<vector<int> > result;
+        vector<TreeNode *> current, next;
+        vector<int> level;
         if (root) {
-            curLevelNodes.push_back(root);
+            current.push_back(root);
         }
-        while (!curLevelNodes.empty()) {
-            for (size_t i = 0; i < curLevelNodes.size(); ++i) {
-                TreeNode * pNode = curLevelNodes[i];
-                curRow.push_back(pNode->val); // add the value
-                // add children nodes to next row
-                if (pNode->left) {
-                    nextLevelNodes.push_back(pNode->left);
+        while (!current.empty()) {
+            for (TreeNode * node : current) {
+                level.push_back(node->val);
+                if (node->left) {
+                    next.push_back(node->left);
                 }
-                if (pNode->right) {
-                    nextLevelNodes.push_back(pNode->right);
+                if (node->right) {
+                    next.push_back(node->right);
                 }
             }
-            rows.push_back(curRow);
-            curRow.clear();
-            curLevelNodes.clear();
-            swap(nextLevelNodes, curLevelNodes); // specialization for vector
+            result.push_back(level);
+            level.clear();
+            current.clear();
+            swap(next, current);
         }
-        
-        return rows;
+        return result;
     }
 };
 

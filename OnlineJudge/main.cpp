@@ -23,7 +23,6 @@
 #include "MinimumDepthOfBinaryTreeSolution.h"
 #include "BalancedBinaryTreeSolution.h"
 #include "BinaryTreeLevelOrderTraversalSolution.h"
-#include "BinaryTreeLevelOrderTraversalSolutionII.h"
 #include "ConstructBinaryTreeFromInorderAndPostorderTraversalSolution.h"
 #include "ConstructBinaryTreeFromPreorderAndInorderTraversalSolution.h"
 #include "MaximumDepthOfBinaryTreeSolution.h"
@@ -168,12 +167,15 @@ int main(int argc, const char * argv[])
 //    pathSumIISolution.pathSum(root, 1);
     
     
-    NextPermutationSolution nextPermutationSolution;
-    vector<int> array = {1, 3, 2};
-    nextPermutationSolution.nextPermutation(array);
-    for (auto x : array) {
-        cout << x << endl;
-    }    
+//    NextPermutationSolution nextPermutationSolution;
+//    vector<int> array = {1, 3, 2};
+//    nextPermutationSolution.nextPermutation(array);
+//    for (auto x : array) {
+//        cout << x << endl;
+//    }    
+    
+    BinaryTreeLevelOrderTraversalSolution levelOrderTraversalSolution;
+    levelOrderTraversalSolution.levelOrder(nullptr);
     
     return EXIT_SUCCESS;
 }

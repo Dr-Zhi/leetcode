@@ -31,7 +31,7 @@ struct TreeNode {
 };
  */
 
-/** http://leetcode.com/onlinejudge#question_103
+/** http://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
  * Given a binary tree, return the zigzag level order traversal of its 
  * nodes' values. (ie, from left to right, then right to left for the next
  * level and alternate between). For example: given binary tree,
@@ -50,47 +50,33 @@ struct TreeNode {
 class BinaryTreeZigzagLevelOrderTraversalSolution {
 public:
     vector<vector<int> > zigzagLevelOrder(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        vector<vector<int> > rows;
-        if (root == NULL) {
-            return rows;
+        vector<TreeNode *> current, next;
+        vector<int> level;
+        vector<vector<int> > result;
+        if (root) {
+            current.push_back(root);
         }
-        
-        vector<TreeNode *> curLevel(1, root);
-        vector<TreeNode *> nextLevel;
-        vector<int> curRow;
-        bool isLeftToRight = true;
-        while (!curLevel.empty()) {
-            for (size_t i = 0; i < curLevel.size(); ++i) {
-                TreeNode * pNode = curLevel[i];
-                curRow.push_back(pNode->val);
-                if (isLeftToRight) {
-                    if (pNode->left) {
-                        nextLevel.push_back(pNode->left);
-                    }
-                    if (pNode->right) {
-                        nextLevel.push_back(pNode->right);
-                    }
+        bool leftToRight = true;
+        while (!current.empty()) {
+            for (TreeNode * node : current) {
+                level.push_back(node->val);
+                if (node->left) {
+                    next.push_back(node->left);
                 }
-                else {
-                    if (pNode->right) {
-                        nextLevel.push_back(pNode->right);
-                    }
-                    if (pNode->left) {
-                        nextLevel.push_back(pNode->left);
-                    }
+                if (node->right) {
+                    next.push_back(node->right);
                 }
             }
-            rows.push_back(curRow);
-            curRow.clear();
-            curLevel.clear();
-            reverse(nextLevel.begin(), nextLevel.end());
-            swap(curLevel, nextLevel);
-            isLeftToRight = !isLeftToRight;
+            if (!leftToRight) {
+                reverse(level.begin(), level.end());
+            }
+            leftToRight = !leftToRight;
+            result.push_back(level);
+            level.clear();
+            current.clear();
+            swap(current, next);
         }
-        
-        return rows;
+        return result;
     }
 };
 

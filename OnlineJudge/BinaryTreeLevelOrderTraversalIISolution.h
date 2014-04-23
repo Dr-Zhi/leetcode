@@ -30,7 +30,7 @@ struct TreeNode {
     }
 };
 
-/** http://leetcode.com/onlinejudge#question_107
+/** http://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/
  * Given a binary tree, return the bottom-up level order traversal of its
  * nodes' values. (ie, from left to right, level by level from leaf to 
  * root). For example: given a binary tree {3,9,20,#,#,15,7},
@@ -49,27 +49,26 @@ struct TreeNode {
 class BinaryTreeLevelOrderTraversalIISolution {
 public:
     vector<vector<int> > levelOrderBottom(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        vector<vector<int> > result;
+        vector<TreeNode *> current, next;
         vector<int> level;
-        vector<TreeNode *> nodes, nextNodes;
+        vector<vector<int> > result;
         if (root) {
-            nodes.push_back(root);
+            current.push_back(root);
         }
-        while (!nodes.empty()) {
-            for (int i = 0; i < nodes.size(); ++i) {
-                TreeNode * node = nodes[i];
+        while (!current.empty()) {
+            for (TreeNode * node : current) {
                 level.push_back(node->val);
-                if (node->left)
-                    nextNodes.push_back(node->left);
-                if (node->right)
-                    nextNodes.push_back(node->right);
+                if (node->left) {
+                    next.push_back(node->left);
+                }
+                if (node->right) {
+                    next.push_back(node->right);
+                }
             }
             result.push_back(level);
             level.clear();
-            swap(nodes, nextNodes);
-            nextNodes.clear();
+            current.clear();
+            swap(current, next);
         }
         reverse(result.begin(), result.end());
         return result;
