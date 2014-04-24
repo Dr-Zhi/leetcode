@@ -34,24 +34,37 @@ class Solution {
 public:
     vector<int> inorderTraversal(TreeNode *root) {
         vector<int> result;
-        inorderTraversalInternal(root, result);
+        stack<const TreeNode *> s;
+        const TreeNode * cur = root;
+        while (!s.empty() || cur) {
+            if (cur) {
+                s.push(cur);
+                cur = cur->left;
+            }
+            else {
+                cur = s.top();
+                s.pop();
+                result.push_back(cur->val);
+                cur = cur->right;
+            }
+        }
         return result;
     }
     
-private:
-    void inorderTraversalInternal(TreeNode * root, vector<int> & result) {
-        if (!root) {
-            return;
-        }
-        
-        if (root->left) {
-            inorderTraversalInternal(root->left, result);
-        }
-        result.push_back(root->val);
-        if (root->right) {
-            inorderTraversalInternal(root->right, result);
-        }
-    }
+//private:
+//    void inorderTraversalInternal(TreeNode * root, vector<int> & result) {
+//        if (!root) {
+//            return;
+//        }
+//        
+//        if (root->left) {
+//            inorderTraversalInternal(root->left, result);
+//        }
+//        result.push_back(root->val);
+//        if (root->right) {
+//            inorderTraversalInternal(root->right, result);
+//        }
+//    }
 };
 
 #endif

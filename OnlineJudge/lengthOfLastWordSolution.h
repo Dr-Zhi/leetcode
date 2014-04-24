@@ -9,7 +9,7 @@
 #ifndef OnlineJudge_lengthOfLastWordSolution_h
 #define OnlineJudge_lengthOfLastWordSolution_h
 
-/** http://leetcode.com/onlinejudge#question_58
+/** http://oj.leetcode.com/problems/length-of-last-word/
  * Given a string s consists of upper/lower-case alphabets and empty space
  * characters ' ', return the length of last word in the string. 
  * If the last word does not exist, return 0.
@@ -21,23 +21,22 @@
 class lengthOfLastWordSolution {
 public:
     int lengthOfLastWord(const char *s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (!s)
+        if (!s) {
             return 0;
-        int length = 0;
-        while (*s) {
-            while (isspace(*s))
-                ++s;
-            if (*s)
-                length = 0;
-            while (*s && !isspace(*s)){
-                ++length, ++s;
-            }
         }
-        return length;
+        
+        int count = 0, len = 0;
+        while (*s) {
+            if (*s == ' ') {
+                count = 0;
+            }
+            else { // alphabet
+                len = ++count;
+            }
+            ++s;
+        }
+        return len;
     }
 };
-
 
 #endif
