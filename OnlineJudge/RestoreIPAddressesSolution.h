@@ -15,7 +15,7 @@
 using std::vector;
 using std::string;
 
-/** http://leetcode.com/onlinejudge#question_93
+/** http://oj.leetcode.com/problems/restore-ip-addresses/
  * Given a string containing only digits, restore it by returning all 
  * possible valid IP address combinations.
  * For example: given "25525511135", return ["255.255.11.135", 

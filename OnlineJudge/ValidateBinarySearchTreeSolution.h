@@ -26,7 +26,7 @@ struct TreeNode {
 };
  */
 
-/** http://leetcode.com/onlinejudge#question_98
+/** http://oj.leetcode.com/problems/validate-binary-search-tree/
  * Given a binary tree, determine if it is a valid binary search tree (BST).
  * Assume a BST is defined as follows:
  * 1. The left subtree of a node contains only nodes with keys less than
@@ -38,20 +38,17 @@ struct TreeNode {
 class ValidateBinarySearchTreeSolution {
 public:
     bool isValidBST(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        return isValidBSTRecursive(root, INT_MIN, INT_MAX);
+        return isValidBSTInternal(root, INT_MIN, INT_MAX);
     }
     
-    bool isValidBSTRecursive(TreeNode * root, int lower, int upper) {
-        if (root == NULL) {
+private:
+    bool isValidBSTInternal(TreeNode * root, int lower, int upper) {
+        if (!root) {
             return true;
         }
-        if (root->val > lower && root->val < upper) {
-            return (isValidBSTRecursive(root->left, lower, root->val) &&
-                    isValidBSTRecursive(root->right, root->val, upper));
-        }
-        return false;
+        return root->val > lower && root->val < upper &&
+        isValidBSTInternal(root->left, lower, root->val) &&
+        isValidBSTInternal(root->right, root->val, upper);
     }
 };
 
