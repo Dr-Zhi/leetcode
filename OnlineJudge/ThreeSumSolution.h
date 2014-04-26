@@ -38,6 +38,10 @@ public:
                     ++j;
                     continue;
                 }
+                if (k < n-1 && num[k] == num[k+1]) {
+                    --k;
+                    continue;
+                }
                 const int val = num[i] + num[j] + num[k];
                 if (val == target) {
                     result.push_back({num[i], num[j], num[k]});
