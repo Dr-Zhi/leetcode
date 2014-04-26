@@ -15,7 +15,7 @@
  * 
  * Analysis: use a hash map.
  */
-class Solution {
+class AnagramsSolution {
 public:
     vector<string> anagrams(vector<string> &strs) {
         unordered_map<string, vector<string> > groups;

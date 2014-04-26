@@ -26,7 +26,7 @@
  * 1. Given n will always be valid.
  * Try to do this in one pass.
  */
-class Solution {
+class RemoveNthNodeFromEndOfListSolution {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {
         ListNode dummy(0);

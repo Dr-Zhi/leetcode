@@ -31,7 +31,7 @@
  * Note: Recursive solution is trivial, could you do it iteratively?
  */
  */
-class Solution {
+class BinaryTreePostorderTraversalSolution {
 public:
     vector<int> postorderTraversal(TreeNode *root) {
         vector<int> result;

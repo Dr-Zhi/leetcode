@@ -17,7 +17,7 @@
  * ["2", "1", "+", "3", "*"] -> ((2 + 1) * 3) -> 9
  * ["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
  */
-class Solution {
+class EvaluateReversePolishNotationSolution {
 public:
     int evalRPN(vector<string> &tokens) {
         stack<int> s;

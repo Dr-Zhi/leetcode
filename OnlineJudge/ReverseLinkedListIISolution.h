@@ -25,7 +25,7 @@
  * Note: given m, n satisfy the following condition: 1 ≤ m ≤ n ≤ length of list.
  *
  */
-class Solution {
+class ReverseLinkedListIISolution {
 public:
     ListNode *reverseBetween(ListNode *head, int m, int n) {
         ListNode dummy(0);

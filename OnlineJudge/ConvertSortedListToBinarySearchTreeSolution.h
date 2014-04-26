@@ -15,7 +15,7 @@
  * Given an array where elements are sorted in ascending order, convert it 
  * to a height balanced BST.
  */
-class Solution {
+class ConvertSortedListToBinarySearchTreeSolution {
 public:
     TreeNode *sortedListToBST(ListNode *head) {
         // Start typing your C/C++ solution below

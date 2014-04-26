@@ -15,7 +15,7 @@
  * The order of elements can be changed. It doesn't matter what you leave
  * beyond the new length.
  */
-class Solution {
+class RemoveElementSolution {
 public:
     /** keeps the original order but may have O(n) copies.*/
     int removeElement(int A[], int n, int elem) {

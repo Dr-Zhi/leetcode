@@ -25,7 +25,7 @@
  * Use two pointers, one moving slow and another one faster. If there is cycle,
  * they will meet at some point, otherwise not.
  */
-class Solution {
+class LinkedListCycleSolution {
 public:
     bool hasCycle(ListNode *head) {
         ListNode * slow = head, * fast = head;
