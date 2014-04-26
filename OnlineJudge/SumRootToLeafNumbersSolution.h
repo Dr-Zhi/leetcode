@@ -11,7 +11,7 @@
 
 #include "Types.h"
 
-/** http://leetcode.com/onlinejudge#question_129
+/** http://oj.leetcode.com/problems/sum-root-to-leaf-numbers/
  * Given a binary tree containing digits from 0-9 only, each root-to-leaf 
  * path could represent a number. An example is the root-to-leaf path 
  * 1->2->3 which represents the number 123. Find the total sum of all 
@@ -25,23 +25,26 @@
  * Return the sum = 12 + 13 = 25.
  *
  * Assumptions in the algorithm:
- * 1. all numbers on nodes must be non-negative
- * 2. there is no overflow during computation
+ * 1. all numbers on nodes are non-negative
+ * 2. No overflow
  */
 class SumRootToLeafNumbersSolution {
 public:
     int sumNumbers(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        return sumNumbersRecursive(root, 0);
+        return sumNumbers(root, 0);
     }
-    int sumNumbersRecursive(TreeNode *root, int localSum) {
-        if (!root)
-            return localSum;
-        if (root->left == NULL && root->right == NULL)
-            return localSum * 10 + root->val;
-        int left = root->left ? sumNumbersRecursive(root->left, localSum*10+root->val) : 0;
-        int right = root->right ? sumNumbersRecursive(root->right, localSum*10+root->val) : 0;
+    
+private:
+    int sumNumbers(TreeNode * root, int value) {
+        if (root == nullptr) {
+            return value;
+        }
+        value = value * 10 + root->val;
+        if (root->left == nullptr && root->right == nullptr) {
+            return value;
+        }
+        int left = root->left ? sumNumbers(root->left, value) : 0;
+        int right = root->right ? sumNumbers(root->right, value) : 0;
         return left + right;
     }
 };

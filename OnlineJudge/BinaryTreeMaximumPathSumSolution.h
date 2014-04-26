@@ -24,8 +24,7 @@ struct TreeNode {
 };
  */
 
-/**
- * http://leetcode.com/onlinejudge#question_124
+/** http://oj.leetcode.com/problems/binary-tree-maximum-path-sum/
  * Given a binary tree, find the maximum path sum. The path may start and
  * end at any node in the tree. For example: Given the below binary tree,
  *     1
@@ -36,23 +35,28 @@ struct TreeNode {
 class BinaryTreeMaximumPathSumSolution {
 public:
     int maxPathSum(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        int globalMax = INT_MIN;
-        maxPathSumRecursive(root, globalMax);
-        return globalMax;
+        int maxSum = INT_MIN;
+        maxPathSum(root, maxSum);
+        return maxSum;
     }
-    int maxPathSumRecursive(TreeNode *root,  int &globalMax) {
-        if (!root) return 0;
-        int left = maxPathSumRecursive(root->left, globalMax);
-        int right = maxPathSumRecursive(root->right, globalMax);
-        int localMax = root->val;
-        if (left > 0)
-            localMax += left;
-        if (right > 0)
-            localMax += right;
-        if (globalMax < localMax)
-            globalMax = localMax;
+    
+private:
+    int maxPathSum(TreeNode * root, int & maxSum) {
+        if (!root) {
+            return 0;
+        }
+        
+        int pathSum = root->val;
+        int left = maxPathSum(root->left, maxSum);
+        if (left > 0) {
+            pathSum += left;
+        }
+        int right = maxPathSum(root->right, maxSum);
+        if (right > 0) {
+            pathSum += right;
+        }
+        maxSum = max(maxSum, pathSum);
+        
         return root->val + max(0, max(left, right));
     }
 };
