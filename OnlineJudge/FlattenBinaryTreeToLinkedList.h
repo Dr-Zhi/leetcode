@@ -19,7 +19,7 @@ struct TreeNode {
 };
 */
 
-/** http://leetcode.com/onlinejudge#question_114
+/** http://oj.leetcode.com/problems/flatten-binary-tree-to-linked-list/
  * Given a binary tree, flatten it to a linked list in-place. For example,
  * Given
      1
@@ -45,19 +45,46 @@ struct TreeNode {
 class FlattenBinaryTreeToLinkedListSolution {
 public:
     void flatten(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (!root)
+        if (root == nullptr) {
             return;
+        }
         
-        flatten(root->right);
-        if (root->left == NULL)
+        stack<TreeNode *> s;
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode * node = s.top();
+            s.pop();
+            if (node->right) {
+                s.push(node->right);
+            }
+            if (node->left) {
+                s.push(node->left);
+            }
+            
+            if (!s.empty()) {
+                node->right = s.top();
+                node->left = nullptr;
+            }
+        }
+    }
+    
+    // Recursive solution
+    void flattenRecursive(TreeNode *root) {
+        if (root == nullptr) {
             return;
+        }
+        
         flatten(root->left);
-        TreeNode * leftTail = root->left;
-        while (leftTail->right)
-            leftTail = leftTail->right;
-        leftTail->right = root->right;
+        flatten(root->right);
+        if (root->left == nullptr) {
+            return;
+        }
+        
+        TreeNode * tail = root->left;
+        while (tail->right) {
+            tail = tail->right;
+        }
+        tail->right = root->right;
         root->right = root->left;
         root->left = NULL;
     }
