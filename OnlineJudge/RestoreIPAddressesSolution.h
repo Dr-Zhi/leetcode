@@ -24,31 +24,42 @@ using std::string;
 class RestoreIPAddressesSolution {
 public:
     vector<string> restoreIpAddresses(string s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        vector<string> addresses;
-        string curStr;
-        restoreIpAddressesRecursive(0, curStr, addresses, s, 0);
-        return addresses;
+        string ip;
+        ip.reserve(s.size() + 3);
+        vector<string> result;
+        restoreIpAddresses(s, 0, 0, ip, result);
+        return result;
     }
-    void restoreIpAddressesRecursive(int digit, string & curStr, vector<string> & addresses, const string & s, int pos){
+    
+private:
+    void restoreIpAddresses(const string & s, int start, int step, string & ip, vector<string> & result) {
+        if (step == 4 && start == s.size()) {
+            ip.resize(ip.size()-1);
+            result.push_back(ip);
+            return;
+        }
+        
+        int remaining = (int)s.size() - start;
+        if (remaining < (4-step) || remaining > (4-step) * 3) { // prune
+            return;
+        }
+        
         int value = 0;
-        for (int i = pos; i < min(pos+3, (int)s.size()); ++i) {
+        for (int i = start; i < start + 3 && i < s.size(); ++i) {
             value = value * 10 + (s[i] - '0');
-            if (value <= 255) {
-                curStr.push_back(s[i]);
-                int curSize = curStr.size();
-                if (digit < 3) {
-                    curStr.push_back('.');
-                    restoreIpAddressesRecursive(digit+1, curStr, addresses, s, i+1);
-                }
-                else if (digit == 3 && i+1 == s.size()) {
-                    addresses.push_back(curStr);
-                }
-                curStr.resize(curSize);
-            }
-            if (value == 0 || value > 255)
+            if (value >= 256) {
                 break;
+            }
+            
+            ip.push_back(s[i]);
+            size_t currentSize = ip.size();
+            ip.push_back('.');
+            restoreIpAddresses(s, i+1, step+1, ip, result);
+            ip.resize(currentSize);
+            
+            if (value == 0) { // 0 is allowed only once
+                break;
+            }
         }
     }
 };
